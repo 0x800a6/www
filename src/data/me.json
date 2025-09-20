@@ -1,0 +1,21 @@
+{
+  "name": "Lexi",
+  "bio": "Software Developer passionate about systems programming and web technologies",
+  "avatar": "static/avatar.gif",
+  "server": {
+    "server_email": "contact@0x800a6.dev"
+  },
+  "contact": {
+    "pgp_fingerprint": "CBBCF7CA2AB792900F7D770A5C0C5E888156C86B",
+    "email": "contact@0x800a6.dev"
+  },
+  "twitter": "0x800a6",
+  "greetings": [
+    "Hi, I'm Lexi",
+    "Hallo, ich bin Lexi",
+    "こんにちは、私はLexiです",
+    "Cześć, jestem Lexi",
+    "Salut, je suis Lexi",
+    "안녕하세요, 저는 Lexi입니다"
+  ]
+}

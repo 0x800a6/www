@@ -1,0 +1,43 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Yet another website that converts perfectly good markdown to JSON because that's apparently what we do now",
+  "type": "module",
+  "main": "scripts/index.js",
+  "scripts": {
+    "build:content": "node content.js",
+    "fetch:remote": "node local.js",
+    "clean": "rm -rf src/content",
+    "test": "echo 'Tests? We don't need no tests. This either works or it doesn't.' && exit 0"
+  },
+  "keywords": [
+    "website", 
+    "content", 
+    "markdown", 
+    "static-site",
+    "json-conversion",
+    "build-tools",
+    "sane-defaults"
+  ],
+  "author": "Lexi <0x800a6@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "glob": "^10.3.10",
+    "gray-matter": "^4.0.3",
+    "ini": "^4.1.1",
+    "js-yaml": "^4.1.0",
+    "marked": "^9.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x800a6/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0x800a6/website/issues"
+  },
+  "homepage": "https://github.com/0x800a6/website#readme"
+}

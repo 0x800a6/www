@@ -1,0 +1,5 @@
+# Ignore node_modules directory
+scripts/node_modules/
+
+# ignore compiled content
+src/content/

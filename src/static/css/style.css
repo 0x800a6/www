@@ -1,0 +1,130 @@
+@import url("../fonts/Quicksand.css");
+@import url("../fonts/Comfortaa.css");
+@import url("../fonts/Nunito.css");
+@import url("../fonts/Poppins.css");
+@import url("../fonts/DancingScript.css");
+
+/* ===== Base Layout ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff0f6;
+  font-family: "Comfortaa", "Quicksand", "Nunito", sans-serif;
+}
+
+/* Ensure main grows and pushes footer down */
+body main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+body .navbar {
+  background: #ee9ca7;
+}
+body .navbar a {
+  color: #fff;
+  font-weight: 500;
+  font-family: "Poppins", "Comfortaa", sans-serif;
+}
+
+/* ===== Hero Section ===== */
+body .hero {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  color: #fff;
+  padding: 6rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Dancing Script", "Nunito", "Comfortaa", sans-serif;
+}
+body .hero p {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* ===== Headers ===== */
+
+/* ===== Fancy Headers (only apply to .fancy) ===== */
+h1.fancy, h2.fancy, h3.fancy, h4.fancy, h5.fancy, h6.fancy,
+.h1.fancy, .h2.fancy, .h3.fancy, .h4.fancy, .h5.fancy, .h6.fancy,
+.display-1.fancy, .display-2.fancy, .display-3.fancy, .display-4.fancy, .display-5.fancy, .display-6.fancy,
+.section-title.fancy {
+  font-family: "Dancing Script", "Nunito", "Comfortaa", cursive !important;
+  font-weight: bold !important;
+  font-style: italic !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.5rem !important;
+  color: #ee9ca7 !important;
+  text-shadow: 1px 2px 8px #fff0f6, 0 1px 0 #ee9ca7 !important;
+  letter-spacing: 1px !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Size overrides for .fancy headers */
+h1.fancy, .h1.fancy, .display-1.fancy { font-size: 3rem !important; }
+h2.fancy, .h2.fancy, .display-2.fancy { font-size: 2.5rem !important; }
+h3.fancy, .h3.fancy, .display-3.fancy { font-size: 2rem !important; }
+h4.fancy, .h4.fancy, .display-4.fancy { font-size: 1.75rem !important; }
+h5.fancy, .h5.fancy, .display-5.fancy { font-size: 1.5rem !important; }
+h6.fancy, .h6.fancy, .display-6.fancy { font-size: 1.25rem !important; }
+
+/* ===== Avatar ===== */
+body .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: block;
+  padding: 4px;
+  background: linear-gradient(135deg, #5BCEFA 0%, #F5A9B8 25%, #FFFFFF 50%, #F5A9B8 75%, #5BCEFA 100%);
+}
+
+/* ===== Section Titles ===== */
+body .section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-family: "Dancing Script", cursive !important;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+/* ===== Footer ===== */
+body footer {
+  background-color: #212529;
+  color: #ddd;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto; /* push footer to bottom */
+}
+body footer a {
+  color: #ee9ca7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+body footer a:hover {
+  color: #ffdde1;
+  text-decoration: underline;
+}
+body .footer-divider {
+  width: 100%;
+  height: 1px;
+  background: #444;
+  margin: 1rem 0;
+}
+
