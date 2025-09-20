@@ -25,7 +25,6 @@ $recentPosts = get_recent_blog_posts(3);
         <!-- Hero -->
         <section class="hero">
             <div>
-                <img src="<?php echo $me['avatar']; ?>" alt="<?php echo $me['name']; ?> avatar" class="avatar shadow">
                 <h1>Hi, I'm <?php echo $me['name']; ?></h1>
                 <p class="lead">
                     <?php echo $me['bio']; ?>
