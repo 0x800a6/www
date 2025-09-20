@@ -8,10 +8,12 @@ $me = $me_data; // For backward compatibility
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>403 Forbidden — <?php echo $me['name']; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <?php 
+    $title = "403 Forbidden";
+    $description = "You don't have permission to access this resource.";
+    include '../includes/seo.php';
+    ?>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
