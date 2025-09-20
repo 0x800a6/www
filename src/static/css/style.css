@@ -89,8 +89,18 @@ body .avatar {
   border-radius: 50%;
   margin-bottom: 1rem;
   display: block;
-  padding: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px;
   background: linear-gradient(135deg, #5BCEFA 0%, #F5A9B8 25%, #FFFFFF 50%, #F5A9B8 75%, #5BCEFA 100%);
+  box-shadow: 0 4px 15px rgba(238, 156, 167, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+body .avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(238, 156, 167, 0.4);
 }
 
 /* ===== Section Titles ===== */
