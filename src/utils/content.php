@@ -1,5 +1,5 @@
 <?php
-// filepath: /home/lexi/source/github.com/0x800a6/website/src/utils/content.php
+// filepath: /home/lexi/source/github.com/0x800a6/www/src/utils/content.php
 
 /**
  * Content retrieval utility

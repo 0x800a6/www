@@ -11,9 +11,9 @@
     "test": "echo 'Tests? We don't need no tests. This either works or it doesn't.' && exit 0"
   },
   "keywords": [
-    "website", 
-    "content", 
-    "markdown", 
+    "website",
+    "content",
+    "markdown",
     "static-site",
     "json-conversion",
     "build-tools",
@@ -34,10 +34,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0x800a6/website.git"
+    "url": "git+https://github.com/0x800a6/www.git"
   },
   "bugs": {
-    "url": "https://github.com/0x800a6/website/issues"
+    "url": "https://github.com/0x800a6/www/issues"
   },
-  "homepage": "https://github.com/0x800a6/website#readme"
+  "homepage": "https://github.com/0x800a6/www#readme"
 }

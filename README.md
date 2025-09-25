@@ -31,7 +31,7 @@ A minimal, privacy-focused personal website built with PHP and Bootstrap. Featur
 ### Using Docker (Recommended)
 
 ```bash
-git clone https://github.com/0x800a6/website.git
+git clone https://github.com/0x800a6/www.git
 cd website
 docker-compose up -d
 ```
@@ -43,17 +43,20 @@ Visit `http://localhost:8080`
 1. **Prerequisites**: PHP 8.2+, Apache/Nginx, Node.js 18+
 
 2. **Install dependencies**:
+
 ```bash
 cd scripts
 npm install  # or pnpm install
 ```
 
 3. **Build content**:
+
 ```bash
 npm run build:content
 ```
 
 4. **Fetch external assets**:
+
 ```bash
 npm run fetch:remote
 ```
@@ -76,6 +79,7 @@ npm run clean           # Remove generated content
 ### Adding Blog Posts
 
 1. Create markdown file in `content/blog/YYYY/MM/slug.md`:
+
 ```markdown
 ---
 title: "Your Post Title"
@@ -88,6 +92,7 @@ Your markdown content here...
 ```
 
 2. Run the build process:
+
 ```bash
 cd scripts
 npm run build:content
@@ -126,6 +131,7 @@ Edit `src/data/me.json` to update personal information:
 ### Blog Configuration
 
 The blog system automatically:
+
 - Processes markdown frontmatter
 - Generates reading time estimates
 - Creates archive pages by year/month
@@ -202,6 +208,7 @@ website/
 ### Security
 
 The `.htaccess` file includes:
+
 - Content Security Policy
 - Security headers (X-Frame-Options, etc.)
 - Directory access protection
