@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch:remote": "node local-to-remote.js",
+    "clean": "rm -rf www/static",
+    "test": "echo 'Tests? We don't need no tests. This either works or it doesn't.' && exit 0"
+  },
+  "author": "Lexi <0x800a6@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x800a6/www.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0x800a6/www/issues"
+  },
+  "homepage": "https://github.com/0x800a6/www#readme"
+}

@@ -1,0 +1,5 @@
+https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css -> www/static/css/vendor/bootstrap-icons.css
+https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 -> www/static/css/vendor/fonts/bootstrap-icons.woff2
+https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 -> www/static/css/vendor/fonts/bootstrap-icons.woff
+https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap -> www/static/css/vendor/fonts/JetBrainsMono-Inter.css
+https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js -> www/static/js/vendor/anime.min.js

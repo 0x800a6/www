@@ -1,0 +1,24 @@
+# See https://0x800a6.dev/author-spec for the specification
+
+
+Author: Lexi
+Handle: 0x800a6
+Email@email: mailto:lexi@0x800a6.dev
+Website@url: https://0x800a6.dev
+Fingerprint@fingerprint: CBBCF7CA2AB792900F7D770A5C0C5E888156C86B
+
+Bio@multiline: """
+Systems and Web Developer.
+Privacy advocate.
+"""
+
+Begin Skills
+    Languages: TypeScript, JavaScript, Go, C
+    Frameworks: React, Next.js, Tailwind CSS
+    Tools: Git, Docker, Vim
+End Skills
+
+Begin Social
+    GitHub@url: https://github.com/0x800a6
+    Twitter@url: https://twitter.com/0x800a6
+End Social
