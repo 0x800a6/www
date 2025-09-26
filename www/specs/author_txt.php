@@ -25,14 +25,14 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
     <meta property="og:url" content="https://0x800a6.dev/specs/author.txt">
     <meta property="og:title" content="Author DSL Specification - Lexi (0x800a6)">
     <meta property="og:description" content="Complete specification and testing interface for the Author DSL parser">
-    <meta property="og:image" content="https://0x800a6.dev/og-image.png">
+    <meta property="og:image" content="https://0x800a6.dev/static/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://0x800a6.dev/specs/author.txt">
     <meta property="twitter:title" content="Author DSL Specification - Lexi (0x800a6)">
     <meta property="twitter:description" content="Complete specification and testing interface for the Author DSL parser">
-    <meta property="twitter:image" content="https://0x800a6.dev/og-image.png">
+    <meta property="twitter:image" content="https://0x800a6.dev/static/og-image.png">
     <link rel="canonical" href="https://0x800a6.dev/specs/author.txt">
 
     <style>
