@@ -15,14 +15,14 @@
     <meta property="og:url" content="https://0x800a6.dev/privacy-manifesto">
     <meta property="og:title" content="Privacy Manifesto - Lexi (0x800a6)">
     <meta property="og:description" content="A manifesto on digital privacy, surveillance, and the right to remain anonymous">
-    <meta property="og:image" content="https://0x800a6.dev/static/og-image.png">
+    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://0x800a6.dev/privacy-manifesto">
     <meta property="twitter:title" content="Privacy Manifesto - Lexi (0x800a6)">
     <meta property="twitter:description" content="A manifesto on digital privacy, surveillance, and the right to remain anonymous">
-    <meta property="twitter:image" content="https://0x800a6.dev/static/og-image.png">
+    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png">
     
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/vendor/bootstrap-icons.css">

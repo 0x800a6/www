@@ -24,7 +24,7 @@
       property="og:description"
       content="Software Developer passionate about systems programming and web technologies"
     />
-    <meta property="og:image" content="https://0x800a6.dev/static/og-image.png" />
+    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@
       property="twitter:description"
       content="Software Developer passionate about systems programming and web technologies"
     />
-    <meta property="twitter:image" content="https://0x800a6.dev/static/og-image.png" />
+    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png" />
 
     <link rel="stylesheet" href="/static/css/styles.css" />
     <link rel="stylesheet" href="/static/css/vendor/bootstrap-icons.css" />

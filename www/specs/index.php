@@ -25,14 +25,14 @@ function get_documents()
     <meta property="og:url" content="https://0x800a6.dev/specs/">
     <meta property="og:title" content="Specifications Directory - Lexi (0x800a6)">
     <meta property="og:description" content="Directory of technical specifications and documentation">
-    <meta property="og:image" content="https://0x800a6.dev/static/og-image.png">
+    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://0x800a6.dev/specs/">
     <meta property="twitter:title" content="Specifications Directory - Lexi (0x800a6)">
     <meta property="twitter:description" content="Directory of technical specifications and documentation">
-    <meta property="twitter:image" content="https://0x800a6.dev/static/og-image.png">
+    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png">
     <link rel="canonical" href="https://0x800a6.dev/specs/">
 
     <style>
