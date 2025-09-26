@@ -304,7 +304,7 @@ Include: https://0x800a6.dev/more-links.txt
       <h2>7. Testing the Parser</h2>
       <p>Use Node.js to parse an <code>author.txt</code> file:</p>
       <pre><code>
-const { parseAuthorDSL, formatParsedData, validateParsedData } = require('@0x800a6/authortxt');
+const { parseAuthorDSL, formatParsedData, validateParsedData } = require('@0x800a6/author-txt');
 const fs = require('fs');
 
 const input = fs.readFileSync('author.txt', 'utf-8');
@@ -366,7 +366,7 @@ try {
       <ul>
         <li>
           <strong>npm:</strong>
-          <pre><code>npm install @0x800a6/authortxt</code></pre>
+          <pre><code>npm install @0x800a6/author-txt</code></pre>
         </li>
         <li>
           <strong>git:</strong>
