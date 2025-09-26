@@ -18,17 +18,17 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://0x800a6.dev/" />
+    <meta property="og:url" content="https://lrr.sh/" />
     <meta property="og:title" content="Lexi (0x800a6) - Software Developer" />
     <meta
       property="og:description"
       content="Software Developer passionate about systems programming and web technologies"
     />
-    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png" />
+    <meta property="og:image" content="https://lrr.sh/static/images/og-image.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://0x800a6.dev/" />
+    <meta property="twitter:url" content="https://lrr.sh/" />
     <meta
       property="twitter:title"
       content="Lexi (0x800a6) - Software Developer"
@@ -37,7 +37,7 @@
       property="twitter:description"
       content="Software Developer passionate about systems programming and web technologies"
     />
-    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png" />
+    <meta property="twitter:image" content="https://lrr.sh/static/images/og-image.png" />
 
     <link rel="stylesheet" href="/static/css/styles.css" />
     <link rel="stylesheet" href="/static/css/vendor/bootstrap-icons.css" />
@@ -45,7 +45,7 @@
       href="/static/css/vendor/fonts/JetBrainsMono-Inter.css"
       rel="stylesheet"
     />
-    <link rel="canonical" href="https://0x800a6.dev/" />
+    <link rel="canonical" href="https://lrr.sh/" />
   </head>
   <body>
     <?php include 'includes/header.php'; ?>
@@ -524,13 +524,13 @@
                 interesting problems.
               </p>
               <div class="contact-methods">
-                <a href="mailto:lexi@0x800a6.dev" class="contact-method glare">
+                <a href="mailto:lexi@lrr.sh" class="contact-method glare">
                   <div class="method-icon">
                     <i class="bi bi-envelope-fill"></i>
                   </div>
                   <div class="method-info">
                     <span class="method-label">Email</span>
-                    <span class="method-value">lexi@0x800a6.dev</span>
+                    <span class="method-value">lexi@lrr.sh</span>
                   </div>
                 </a>
                 <a
@@ -580,7 +580,7 @@
                   <div class="terminal-line">
                     <span class="prompt">$</span>
                     <span class="command"
-                      >send_message --to lexi@0x800a6.dev</span
+                      >send_message --to lexi@lrr.sh</span
                     >
                   </div>
                   <div class="terminal-output">

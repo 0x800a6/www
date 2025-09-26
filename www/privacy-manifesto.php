@@ -12,22 +12,22 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://0x800a6.dev/privacy-manifesto">
+    <meta property="og:url" content="https://lrr.sh/privacy-manifesto">
     <meta property="og:title" content="Privacy Manifesto - Lexi (0x800a6)">
     <meta property="og:description" content="A manifesto on digital privacy, surveillance, and the right to remain anonymous">
-    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png">
+    <meta property="og:image" content="https://lrr.sh/static/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://0x800a6.dev/privacy-manifesto">
+    <meta property="twitter:url" content="https://lrr.sh/privacy-manifesto">
     <meta property="twitter:title" content="Privacy Manifesto - Lexi (0x800a6)">
     <meta property="twitter:description" content="A manifesto on digital privacy, surveillance, and the right to remain anonymous">
-    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png">
+    <meta property="twitter:image" content="https://lrr.sh/static/images/og-image.png">
     
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/vendor/bootstrap-icons.css">
     <link href="/static/css/vendor/fonts/JetBrainsMono-Inter.css" rel="stylesheet">
-    <link rel="canonical" href="https://0x800a6.dev/">
+    <link rel="canonical" href="https://lrr.sh/">
 </head>
 <body>
     <?php include 'includes/header.php'; ?>

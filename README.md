@@ -381,7 +381,7 @@ _"Building the future, one line at a time"_
 
 ## 🔗 Links
 
-- **Website**: [0x800a6.dev](https://0x800a6.dev)
+- **Website**: [lrr.sh](https://lrr.sh)
 - **GitHub**: [github.com/0x800a6](https://github.com/0x800a6)
-- **Email**: lexi@0x800a6.dev
+- **Email**: lexi@lrr.sh
 - **PGP Key**: CBBCF7CA2AB792900F7D770A5C0C5E888156C86B

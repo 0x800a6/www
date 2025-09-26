@@ -22,18 +22,18 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://0x800a6.dev/specs/author.txt">
+    <meta property="og:url" content="https://lrr.sh/specs/author.txt">
     <meta property="og:title" content="Author DSL Specification - Lexi (0x800a6)">
     <meta property="og:description" content="Complete specification and testing interface for the Author DSL parser">
-    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png">
+    <meta property="og:image" content="https://lrr.sh/static/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://0x800a6.dev/specs/author.txt">
+    <meta property="twitter:url" content="https://lrr.sh/specs/author.txt">
     <meta property="twitter:title" content="Author DSL Specification - Lexi (0x800a6)">
     <meta property="twitter:description" content="Complete specification and testing interface for the Author DSL parser">
-    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png">
-    <link rel="canonical" href="https://0x800a6.dev/specs/author.txt">
+    <meta property="twitter:image" content="https://lrr.sh/static/images/og-image.png">
+    <link rel="canonical" href="https://lrr.sh/specs/author.txt">
 
     <style>
       body {
@@ -154,7 +154,7 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
         Keys can have a type annotation. Use the <code>@</code> symbol to
         specify a type.
       </p>
-      <pre>Website@url: https://0x800a6.dev</pre>
+      <pre>Website@url: https://lrr.sh</pre>
       <p>
         Common types include <code>url</code>, <code>email</code>,
         <code>date</code>, <code>fingerprint</code>, and <code>multiline</code>.
@@ -209,7 +209,7 @@ Inspired by Serial Experiments Lain.
         <code>author.txt</code> file. The parser should fetch or read the
         included file if needed.
       </p>
-      <pre>Include: https://0x800a6.dev/more-links.txt</pre>
+      <pre>Include: https://lrr.sh/more-links.txt</pre>
 
       <h3>3.7 Reserved Keys</h3>
       <ul>
@@ -234,7 +234,7 @@ Inspired by Serial Experiments Lain.
   "Author": "Lexi",
   "Handle": "0x800a6",
   "Alias": ["lexi", "author", "sysprog"],
-  "Website": { "type":"url", "value":"https://0x800a6.dev" },
+  "Website": { "type":"url", "value":"https://lrr.sh" },
   "Bio": "Systems programmer.\nPrivacy advocate.\nInspired by Serial Experiments Lain.",
   "Profile": [
     { "Skills":["Rust","C","Assembly"], "Motto":"Building the future" }
@@ -274,7 +274,7 @@ Author-DSL: 1.0
 Author: Lexi
 Handle: 0x800a6
 Alias: lexi, author, sysprog
-Website@url: https://0x800a6.dev
+Website@url: https://lrr.sh
 Contact@email: mailto:lexi@example.com
 Birthday@date: 1999-09-26
 
@@ -292,10 +292,10 @@ End Profile
 
 Begin Links
     GitHub@url: https://github.com/0x800a6
-    Resume@url: https://0x800a6.dev/resume.php
+    Resume@url: https://lrr.sh/resume.php
 End Links
 
-Include: https://0x800a6.dev/more-links.txt
+Include: https://lrr.sh/more-links.txt
 </pre
       >
     </div>

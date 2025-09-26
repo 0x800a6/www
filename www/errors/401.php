@@ -247,7 +247,7 @@ http_response_code(401);
             <div class="terminal-body">
                 <div class="terminal-line">
                     <span class="prompt">$</span>
-                    <span class="command">ssh user@0x800a6.dev</span>
+                    <span class="command">ssh user@lrr.sh</span>
                 </div>
                 <div class="terminal-output">Permission denied (publickey).</div>
                 <div class="terminal-line">

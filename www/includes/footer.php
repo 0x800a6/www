@@ -14,7 +14,7 @@
           aria-label="Visit my GitHub profile"
           >GitHub</a
         >
-        <a href="mailto:lexi@0x800a6.dev" aria-label="Send me an email"
+        <a href="mailto:lexi@lrr.sh" aria-label="Send me an email"
           >Email</a
         >
       </div>

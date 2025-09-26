@@ -22,18 +22,18 @@ function get_documents()
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://0x800a6.dev/specs/">
+    <meta property="og:url" content="https://lrr.sh/specs/">
     <meta property="og:title" content="Specifications Directory - Lexi (0x800a6)">
     <meta property="og:description" content="Directory of technical specifications and documentation">
-    <meta property="og:image" content="https://0x800a6.dev/static/images/og-image.png">
+    <meta property="og:image" content="https://lrr.sh/static/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://0x800a6.dev/specs/">
+    <meta property="twitter:url" content="https://lrr.sh/specs/">
     <meta property="twitter:title" content="Specifications Directory - Lexi (0x800a6)">
     <meta property="twitter:description" content="Directory of technical specifications and documentation">
-    <meta property="twitter:image" content="https://0x800a6.dev/static/images/og-image.png">
-    <link rel="canonical" href="https://0x800a6.dev/specs/">
+    <meta property="twitter:image" content="https://lrr.sh/static/images/og-image.png">
+    <link rel="canonical" href="https://lrr.sh/specs/">
 
     <style>
       

@@ -1,10 +1,10 @@
-# See https://0x800a6.dev/author-spec for the specification
+# See https://lrr.sh/author-spec for the specification
 
 
 Author: Lexi
 Handle: 0x800a6
-Email@email: mailto:lexi@0x800a6.dev
-Website@url: https://0x800a6.dev
+Email@email: mailto:lexi@lrr.sh
+Website@url: https://lrr.sh
 Fingerprint@fingerprint: CBBCF7CA2AB792900F7D770A5C0C5E888156C86B
 
 Bio@multiline: """
