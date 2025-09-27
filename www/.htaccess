@@ -41,6 +41,16 @@ RewriteRule ^.*\.(bak|backup|old|orig|original|save|sav|tmp|temp)$ - [F,L]
 </FilesMatch>
 
 # ===========================================
+# GIT ROUTES - HANDLE /git/* PATHS
+# ===========================================
+
+# Handle /git routes (with or without trailing slash)
+RewriteRule ^git/?$ git.php [L]
+
+# Handle /git/something routes
+RewriteRule ^git/([^/]+)/?$ git.php [L]
+
+# ===========================================
 # CLEAN URLs - REMOVE .PHP EXTENSION
 # ===========================================
 
