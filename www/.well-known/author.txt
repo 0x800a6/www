@@ -1,4 +1,4 @@
-# See https://lrr.sh/author-spec for the specification
+# See https://lrr.sh/specs/author_txt for the specification
 
 
 Author: Lexi
