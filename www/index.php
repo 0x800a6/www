@@ -178,6 +178,12 @@ function extract_php_variable($content, $variable_name) {
       </div>
     </section>
 
+    <!-- Discord Server -->
+    <section id="discord">
+      <h2 class="section-title">Discord</h2>
+      <?php include 'components/discord.php'; ?>
+    </section>
+
     <!-- Footer -->
     <?php include 'includes/footer.php'; ?>
 

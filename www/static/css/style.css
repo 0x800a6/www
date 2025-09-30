@@ -406,3 +406,193 @@ body {
 [data-theme="light"] .token.variable {
   color: #427b58;
 }
+
+/* Discord Card Styling */
+.discord-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.discord-card {
+  max-width: 500px;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.discord-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #5865f2, #4752c4);
+  color: white;
+}
+
+.discord-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.discord-title h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.discord-subtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.discord-content {
+  padding: 1.5rem;
+}
+
+.discord-content p {
+  color: var(--fg);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.discord-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  background: var(--border);
+  transform: translateY(-1px);
+}
+
+.feature i {
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+.feature span {
+  font-size: 0.8rem;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.discord-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #5865f2;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+
+.discord-join-btn:hover {
+  background: #4752c4;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+.discord-join-btn i {
+  font-size: 1.2rem;
+}
+
+/* Light theme adjustments for Discord card */
+[data-theme="light"] .discord-card {
+  background: var(--bg-secondary);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .discord-header {
+  background: linear-gradient(135deg, #5865f2, #4752c4);
+}
+
+[data-theme="light"] .feature {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .feature:hover {
+  background: var(--border);
+}
+
+/* Responsive Discord card */
+@media (max-width: 768px) {
+  .discord-container {
+    padding: 0 1rem;
+  }
+
+  .discord-header {
+    padding: 1rem;
+  }
+
+  .discord-content {
+    padding: 1rem;
+  }
+
+  .discord-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .feature {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .discord-features {
+    grid-template-columns: 1fr;
+  }
+
+  .discord-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .discord-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
