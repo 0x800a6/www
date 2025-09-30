@@ -5,6 +5,10 @@ $description = 'Complete specification and testing interface for the Author DSL 
 $version = '1.0';
 $type = 'Configuration Language';
 $status = 'Active';  // Active, Draft, Deprecated, Archived
+
+// Get theme preference from cookie, default to dark
+$theme = isset($_COOKIE['theme-preference']) ? $_COOKIE['theme-preference'] : 'dark';
+$prism_theme = $theme === 'light' ? 'prism' : 'prism-tomorrow';
 ?>
 
 
@@ -55,6 +59,7 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
     />
 
     <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/<?php echo $prism_theme; ?>.min.css" rel="stylesheet" id="prism-theme">
     <style>
       .section {
         margin: 2rem 0;
@@ -433,6 +438,28 @@ cd authortxt
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
     <script>
+      // Function to switch Prism theme
+      function switchPrismTheme(theme) {
+        const prismThemeLink = document.getElementById('prism-theme');
+        const newTheme = theme === 'light' ? 'prism' : 'prism-tomorrow';
+        prismThemeLink.href = `https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/${newTheme}.min.css`;
+        
+        // Re-highlight all code blocks with new theme
+        setTimeout(() => {
+          Prism.highlightAll();
+        }, 100);
+      }
+
+      // Initialize Prism after DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        Prism.highlightAll();
+        
+        // Listen for theme changes
+        window.addEventListener('themeChanged', function(event) {
+          switchPrismTheme(event.detail.theme);
+        });
+      });
+
       // Anime.js animations
       anime({
         targets: "#title",

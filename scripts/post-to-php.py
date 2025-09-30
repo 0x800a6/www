@@ -3,7 +3,8 @@
 Post to PHP Converter
 
 Converts markdown blog posts with YAML frontmatter to PHP templates.
-Supports syntax highlighting, validation, and comprehensive error handling.
+Supports syntax highlighting with light/dark theme switching, validation, 
+and comprehensive error handling.
 """
 
 import sys
@@ -400,6 +401,10 @@ $language = "{escaped_language}";
 $date = "{escaped_date}";
 $slug = "{slug}";
 $description = "{escaped_description}";
+
+// Get theme preference from cookie, default to dark
+$theme = isset($_COOKIE['theme-preference']) ? $_COOKIE['theme-preference'] : 'dark';
+$prism_theme = $theme === 'light' ? 'prism' : 'prism-tomorrow';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -415,8 +420,7 @@ $description = "{escaped_description}";
     />
     <link rel="stylesheet" href="/static/css/style.css" />
     <!-- Prism.js for syntax highlighting -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@master/themes/prism-gruvbox-dark.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/<?php echo $prism_theme; ?>.min.css" rel="stylesheet" id="prism-theme" />
 </head>
 <body class="container">
     <!-- Navbar -->
@@ -438,6 +442,30 @@ $description = "{escaped_description}";
     <!-- Prism.js for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="/static/js/theme-toggle.js"></script>
+    <script>
+      // Function to switch Prism theme
+      function switchPrismTheme(theme) {{
+        const prismThemeLink = document.getElementById('prism-theme');
+        const newTheme = theme === 'light' ? 'prism' : 'prism-tomorrow';
+        prismThemeLink.href = `https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/${{newTheme}}.min.css`;
+        
+        // Re-highlight all code blocks with new theme
+        setTimeout(() => {{
+          Prism.highlightAll();
+        }}, 100);
+      }}
+
+      // Initialize Prism after DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {{
+        Prism.highlightAll();
+        
+        // Listen for theme changes
+        window.addEventListener('themeChanged', function(event) {{
+          switchPrismTheme(event.detail.theme);
+        }});
+      }});
+    </script>
 </body>
 </html>"""
         
@@ -552,7 +580,8 @@ Features:
   - Comprehensive SEO meta tags (Open Graph, Twitter Cards)
   - JSON-LD structured data for search engines
   - Automatic keyword generation from title and language
-  - Syntax highlighting with Prism.js
+  - Syntax highlighting with Prism.js (light/dark theme support)
+  - Dynamic theme switching for code blocks
   - Responsive Bootstrap layout
         """
     )

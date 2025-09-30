@@ -5,6 +5,10 @@ $i3 = file_get_contents('./data/dotfiles/i3_config');
 $picom = file_get_contents('./data/dotfiles/picom.conf');
 $kitty = file_get_contents('./data/dotfiles/kitty.conf');
 $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
+
+// Get theme preference from cookie, default to dark
+$theme = isset($_COOKIE['theme-preference']) ? $_COOKIE['theme-preference'] : 'dark';
+$prism_theme = $theme === 'light' ? 'prism' : 'prism-tomorrow';
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +54,7 @@ $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/static/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/<?php echo $prism_theme; ?>.min.css" rel="stylesheet" id="prism-theme">
     <style>
         .section-title {
         color: var(--green);
@@ -372,9 +376,26 @@ $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
         });
       }
 
+      // Function to switch Prism theme
+      function switchPrismTheme(theme) {
+        const prismThemeLink = document.getElementById('prism-theme');
+        const newTheme = theme === 'light' ? 'prism' : 'prism-tomorrow';
+        prismThemeLink.href = `https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/${newTheme}.min.css`;
+        
+        // Re-highlight all code blocks with new theme
+        setTimeout(() => {
+          Prism.highlightAll();
+        }, 100);
+      }
+
       // Initialize Prism after DOM is loaded
       document.addEventListener('DOMContentLoaded', function() {
         Prism.highlightAll();
+        
+        // Listen for theme changes
+        window.addEventListener('themeChanged', function(event) {
+          switchPrismTheme(event.detail.theme);
+        });
       });
 
       // Anime.js animations
