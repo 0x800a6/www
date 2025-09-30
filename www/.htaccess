@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# If the request is for a file or directory that exists, serve it as is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# If the request does not contain a file extension, try appending .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}$
+RewriteRule ^(.*)$ $1.php [L]
+
+# If the request is for rss.xml, serve it as rss.xml.php
+RewriteRule ^rss\.xml$ rss.xml.php [L]
