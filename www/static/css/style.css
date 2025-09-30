@@ -1,4 +1,5 @@
 :root {
+  /* Dark theme (default) */
   --bg: #282828;
   --fg: #ebdbb2;
   --red: #cc241d;
@@ -8,6 +9,25 @@
   --purple: #b16286;
   --aqua: #689d6a;
   --gray: #a89984;
+  --bg-secondary: #1d2021;
+  --border: #3c3836;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+  /* Light theme */
+  --bg: #fbf1c7;
+  --fg: #3c3836;
+  --red: #cc241d;
+  --green: #98971a;
+  --yellow: #d79921;
+  --blue: #076678;
+  --purple: #b16286;
+  --aqua: #427b58;
+  --gray: #7c6f64;
+  --bg-secondary: #f2e5bc;
+  --border: #d5c4a1;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 body {
   background: var(--bg);
@@ -27,8 +47,8 @@ a:hover {
   color: var(--aqua);
 }
 .navbar {
-  background: #1d2021;
-  border-bottom: 1px solid #3c3836;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
   font-size: 0.95rem;
 }
 .navbar-brand {
@@ -56,11 +76,11 @@ header p {
 .section-title {
   color: var(--green);
   margin-top: 2rem;
-  border-bottom: 1px solid #3c3836;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
 }
 .post {
-  border-bottom: 1px solid #3c3836;
+  border-bottom: 1px solid var(--border);
   padding: 1rem 0;
 }
 .post h2 {
@@ -72,7 +92,7 @@ header p {
   color: var(--gray);
 }
 footer {
-  border-top: 1px solid #3c3836;
+  border-top: 1px solid var(--border);
   margin-top: 3rem;
   padding: 1rem;
   text-align: center;
@@ -81,8 +101,8 @@ footer {
 
 /* Code block styling */
 pre {
-  background: #1d2021 !important;
-  border: 1px solid #3c3836;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
   overflow-x: auto;
@@ -99,8 +119,8 @@ code {
 
 /* Dropdown styling */
 .dropdown-menu {
-  background: #1d2021;
-  border: 1px solid #3c3836;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.5rem 0;
   font-size: 0.9rem;
@@ -113,18 +133,18 @@ code {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background: #3c3836;
+  background: var(--border);
   color: var(--aqua);
 }
 
 .dropdown-divider {
-  border-top: 1px solid #3c3836;
+  border-top: 1px solid var(--border);
 }
 
 /* Inline code styling */
 p code,
 li code {
-  background: #3c3836;
+  background: var(--border);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   color: var(--yellow);
@@ -132,8 +152,8 @@ li code {
 
 /* Prism.js overrides for better integration */
 pre[class*="language-"] {
-  background: #1d2021 !important;
-  border: 1px solid #3c3836;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border);
 }
 
 .token.comment,
@@ -205,8 +225,8 @@ pre[class*="language-"] {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  background: #1d2021;
-  border: 1px solid #3c3836;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--fg);
   text-decoration: none;
@@ -215,11 +235,11 @@ pre[class*="language-"] {
 }
 
 .social-link:hover {
-  background: #3c3836;
+  background: var(--border);
   border-color: var(--aqua);
   color: var(--aqua);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 .social-link i {
@@ -246,11 +266,11 @@ pre[class*="language-"] {
 
   /* Mobile navbar adjustments */
   .navbar-collapse {
-    background: #1d2021;
+    background: var(--bg-secondary);
     border-radius: 8px;
     margin-top: 0.5rem;
     padding: 1rem;
-    border: 1px solid #3c3836;
+    border: 1px solid var(--border);
   }
 
   .navbar-nav {
@@ -268,6 +288,121 @@ pre[class*="language-"] {
   }
 
   .navbar-nav .nav-link:hover {
-    background: #3c3836;
+    background: var(--border);
   }
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--fg);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.theme-toggle:hover {
+  background: var(--border);
+  color: var(--aqua);
+  border-color: var(--aqua);
+}
+
+.theme-toggle i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(180deg);
+}
+
+.theme-toggle .toggle-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Theme transition animation */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Smooth theme switching */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Additional light theme improvements */
+[data-theme="light"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d79921' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(215, 153, 33, 0.25);
+}
+
+/* Ensure proper contrast in light theme */
+[data-theme="light"] .token.comment,
+[data-theme="light"] .token.prolog,
+[data-theme="light"] .token.doctype,
+[data-theme="light"] .token.cdata {
+  color: #7c6f64;
+}
+
+[data-theme="light"] .token.punctuation {
+  color: #3c3836;
+}
+
+[data-theme="light"] .token.property,
+[data-theme="light"] .token.tag,
+[data-theme="light"] .token.boolean,
+[data-theme="light"] .token.number,
+[data-theme="light"] .token.constant,
+[data-theme="light"] .token.symbol,
+[data-theme="light"] .token.deleted {
+  color: #cc241d;
+}
+
+[data-theme="light"] .token.selector,
+[data-theme="light"] .token.attr-name,
+[data-theme="light"] .token.string,
+[data-theme="light"] .token.char,
+[data-theme="light"] .token.builtin,
+[data-theme="light"] .token.inserted {
+  color: #98971a;
+}
+
+[data-theme="light"] .token.operator,
+[data-theme="light"] .token.entity,
+[data-theme="light"] .token.url,
+[data-theme="light"] .language-css .token.string,
+[data-theme="light"] .style .token.string {
+  color: #d79921;
+}
+
+[data-theme="light"] .token.atrule,
+[data-theme="light"] .token.attr-value,
+[data-theme="light"] .token.keyword {
+  color: #b16286;
+}
+
+[data-theme="light"] .token.function,
+[data-theme="light"] .token.class-name {
+  color: #076678;
+}
+
+[data-theme="light"] .token.regex,
+[data-theme="light"] .token.important,
+[data-theme="light"] .token.variable {
+  color: #427b58;
 }

@@ -103,8 +103,8 @@ $total_posts = count($posts);
     
     <style>
       .post-card {
-        background: #1d2021;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 1.5rem;
         margin: 1rem 0;
@@ -148,8 +148,8 @@ $total_posts = count($posts);
         margin-right: 0.5rem;
       }
       .stats-section {
-        background: #1d2021;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 1.5rem;
         margin: 2rem 0;

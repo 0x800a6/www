@@ -41,37 +41,38 @@
 <style>
   /* Gruvbox Dark inspired */
   .navbar {
-    background-color: #282828 !important;
+    background-color: var(--bg) !important;
   }
   .navbar-brand {
-    color: #fabd2f !important; /* yellow from Gruvbox */
+    color: var(--yellow) !important; /* yellow from Gruvbox */
   }
   .navbar-brand .brand-symbol {
     font-family: monospace;
     font-weight: 700;
-    color: #d3869b; /* pink/purple accent */
+    color: var(--purple); /* pink/purple accent */
     margin-right: 4px;
   }
   .navbar-nav .nav-link {
-    color: #ebdbb2 !important;
+    color: var(--fg) !important;
     transition: color 0.2s ease;
   }
   .navbar-nav .nav-link:hover {
-    color: #fabd2f !important;
+    color: var(--yellow) !important;
   }
   .navbar-toggler {
-    border: 2px solid #fabd2f;
+    border: 2px solid var(--yellow);
     border-radius: 6px;
     padding: 0.4rem 0.6rem;
     background: transparent;
     transition: all 0.2s ease;
   }
   .navbar-toggler:hover {
-    background: #3c3836;
-    border-color: #83a598;
+    background: var(--border);
+    border-color: var(--aqua);
   }
   .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(250, 189, 47, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--yellow);
+    opacity: 0.25;
   }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fabd2f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -79,3 +80,6 @@
     height: 1.2em;
   }
 </style>
+
+<!-- Theme Toggle Script -->
+<script src="/static/js/theme-toggle.js"></script>

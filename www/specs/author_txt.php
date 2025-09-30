@@ -59,12 +59,12 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
       .section {
         margin: 2rem 0;
         padding: 1.5rem;
-        background: #1d2021;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 8px;
       }
       .notice {
-        background: #3c3836;
+        background: var(--border);
         border: 1px solid var(--yellow);
         border-radius: 6px;
         padding: 1rem;
@@ -84,8 +84,8 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
         color: var(--green);
       }
       pre {
-        background: #1d2021 !important;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary) !important;
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 1rem;
         overflow-x: auto;
@@ -97,7 +97,7 @@ $status = 'Active';  // Active, Draft, Deprecated, Archived
         font-family: "Fira Code", "JetBrains Mono", "Consolas", "Monaco",
           "Courier New", monospace;
         font-size: 0.9em;
-        background: #3c3836;
+        background: var(--border);
         padding: 0.2em 0.4em;
         border-radius: 4px;
         color: var(--yellow);

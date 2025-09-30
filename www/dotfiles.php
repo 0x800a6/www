@@ -59,37 +59,37 @@ $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
         padding-bottom: 0.5rem;
       }
       .accordion-button {
-        background-color: #1d2021;
+        background-color: var(--bg-secondary);
         color: var(--fg);
-        border: 1px solid #3c3836;
+        border: 1px solid var(--border);
         transition: background 0.2s;
       }
       .accordion-button:hover {
-        background-color: #3c3836;
+        background-color: var(--border);
         color: var(--aqua);
       }
       .accordion-button:not(.collapsed) {
-        background-color: #3c3836;
+        background-color: var(--border);
         color: var(--yellow);
       }
       .accordion-item {
-        background-color: #1d2021;
-        border: 1px solid #3c3836;
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 0.5rem;
         margin-bottom: 0.5rem;
         overflow: hidden;
       }
       .accordion-body {
-        background-color: #1d2021;
+        background-color: var(--bg-secondary);
       }
       pre {
-        background-color: #2d3748 !important;
+        background-color: var(--bg-secondary) !important;
         border-radius: 0.5rem;
         padding: 1rem;
         font-size: 0.9rem;
         line-height: 1.4;
         overflow-x: auto;
-        border: 1px solid #3c3836;
+        border: 1px solid var(--border);
         position: relative;
         margin: 0;
       }
@@ -100,8 +100,8 @@ $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
         position: absolute;
         top: 0.5rem;
         right: 0.5rem;
-        background-color: #4a5568;
-        color: white;
+        background-color: var(--border);
+        color: var(--fg);
         border: none;
         border-radius: 0.25rem;
         padding: 0.25rem 0.5rem;
@@ -113,10 +113,10 @@ $rofi = file_get_contents('./data/dotfiles/spotlight.rasi');
       }
       .copy-btn:hover {
         opacity: 1;
-        background-color: #2b6cb0;
+        background-color: var(--blue);
       }
       .copy-btn.copied {
-        background-color: #38a169;
+        background-color: var(--green);
         opacity: 1;
       }
       pre code {

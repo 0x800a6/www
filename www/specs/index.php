@@ -56,13 +56,13 @@ function get_documents()
       .section {
         margin: 2rem 0;
         padding: 1.5rem;
-        background: #1d2021;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 8px;
       }
       .spec-item {
-        background: #1d2021;
-        border: 1px solid #3c3836;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 1.5rem;
         margin: 1rem 0;
@@ -95,7 +95,7 @@ function get_documents()
         color: var(--yellow);
       }
       .notice {
-        background: #3c3836;
+        background: var(--border);
         border: 1px solid var(--yellow);
         border-radius: 6px;
         padding: 1rem;
