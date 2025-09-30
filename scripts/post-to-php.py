@@ -455,7 +455,7 @@ class PostConverter:
     Main class for converting markdown posts to PHP templates.
     """
     
-    def __init__(self, output_dir: str = "www/posts"):
+    def __init__(self, output_dir: str = "www/post"):
         """
         Initialize the PostConverter.
         
