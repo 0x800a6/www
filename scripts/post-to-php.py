@@ -357,7 +357,7 @@ def generate_structured_data(frontmatter: Dict[str, str], slug: str) -> str:
 {json_ld}
     </script>"""
 
-def create_template(frontmatter: Dict[str, str], content: str, output_dir: str = "www/posts") -> str:
+def create_template(frontmatter: Dict[str, str], content: str, output_dir: str = "www/post") -> str:
     """
     Creates a PHP template from a dictionary of frontmatter.
     
@@ -564,8 +564,8 @@ Features:
     
     parser.add_argument(
         '-o', '--output',
-        default='www/posts',
-        help='Output directory for PHP files (default: www/posts)'
+        default='www/post',
+        help='Output directory for PHP files (default: www/post)'
     )
     
     parser.add_argument(
