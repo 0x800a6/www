@@ -33,7 +33,7 @@
           <a class="nav-link px-3" href="/#about">About</a>
         </li>
         <li class="nav-item d-flex align-items-center gap-2" style="padding-right: 0.75rem;">
-          <a href="https://github.com/sponsors/0x800a6" target="_blank" rel="noopener noreferrer" class="social-link" title="Sponsor" style="font-size: 0.95em; padding: 0.2em 0.4em;">
+          <a href="#" class="social-link sponsor-trigger" title="Sponsor" style="font-size: 0.95em; padding: 0.2em 0.4em;" data-bs-toggle="modal" data-bs-target="#sponsorModal">
             <i class="bi bi-heart" style="font-size: 1em; color: var(--red); fill: var(--red);"></i>
             <span style="font-size: 0.95em;">Sponsor</span>
           </a>
@@ -42,6 +42,44 @@
     </div>
   </div>
 </nav>
+
+<!-- Sponsor Modal -->
+<div class="modal fade" id="sponsorModal" tabindex="-1" aria-labelledby="sponsorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sponsorModalLabel">
+          <i class="bi bi-heart-fill" style="color: var(--red); margin-right: 0.5rem;"></i>
+          Support My Work
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-description">Choose your preferred platform to support my development work:</p>
+        <div class="sponsor-options">
+          <a href="https://github.com/sponsors/0x800a6" target="_blank" rel="noopener noreferrer" class="sponsor-option">
+            <div class="sponsor-icon github">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="sponsor-info">
+              <h6>GitHub Sponsors</h6>
+              <p>Support through GitHub's official sponsorship program</p>
+            </div>
+          </a>
+          <a href="https://ko-fi.com/lrr" target="_blank" rel="noopener noreferrer" class="sponsor-option">
+            <div class="sponsor-icon ko-fi">
+              <i class="bi bi-cup-hot"></i>
+            </div>
+            <div class="sponsor-info">
+              <h6>Ko-fi</h6>
+              <p>Buy me a coffee or support with a one-time donation</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
   /* Gruvbox Dark inspired */
