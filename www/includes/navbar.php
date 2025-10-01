@@ -39,6 +39,9 @@
         <li class="nav-item">
           <a class="nav-link px-3" href="/#about">About</a>
         </li>
+        <li class="nav-item d-flex align-items-center gap-2" style="padding-right: 0.75rem;">
+          <iframe src="https://github.com/sponsors/0x800a6/button" title="Sponsor 0x800a6" height="35" width="116" style="border: 0;"></iframe>
+        </li>
       </ul>
     </div>
   </div>
