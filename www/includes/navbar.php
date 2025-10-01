@@ -34,7 +34,7 @@
         </li>
         <li class="nav-item d-flex align-items-center gap-2" style="padding-right: 0.75rem;">
           <a href="https://github.com/sponsors/0x800a6" target="_blank" rel="noopener noreferrer" class="social-link" title="Sponsor" style="font-size: 0.95em; padding: 0.2em 0.4em;">
-            <i class="bi bi-heart" fill="var(--red)" style="font-size: 1em;"></i>
+            <i class="bi bi-heart" style="font-size: 1em; color: var(--red); fill: var(--red);"></i>
             <span style="font-size: 0.95em;">Sponsor</span>
           </a>
         </li>
