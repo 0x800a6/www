@@ -34,6 +34,9 @@
           <a class="nav-link px-3" href="/resume">Resume</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link px-3" href="/friends">Friends</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link px-3" href="/#about">About</a>
         </li>
       </ul>
