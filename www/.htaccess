@@ -2,12 +2,12 @@ RewriteEngine On
 
 # Security Headers
 <IfModule mod_headers.c>
-    # Content Security Policy - Allow embedding GitHub Sponsors card iframe
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-src 'self' https://docs.google.com https://github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    # Content Security Policy - Block unwanted script injection
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-src 'self' https://docs.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
     
     # Additional security headers
     Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options "ALLOW-FROM https://github.com"
+    Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
