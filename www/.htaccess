@@ -3,7 +3,7 @@ RewriteEngine On
 # Security Headers
 <IfModule mod_headers.c>
     # Content Security Policy - Block unwanted script injection
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-src 'self' https://docs.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
     
     # Additional security headers
     Header always set X-Content-Type-Options nosniff
@@ -22,6 +22,5 @@ RewriteRule ^ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}$
 RewriteRule ^(.*)$ $1.php [L]
-
 # If the request is for rss.xml, serve it as rss.xml.php
 RewriteRule ^rss\.xml$ rss.xml.php [L]

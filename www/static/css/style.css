@@ -596,3 +596,43 @@ body {
     font-size: 1.2rem;
   }
 }
+
+/* Resume Page Styling */
+.resume-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.resume-container iframe {
+  border-radius: 8px;
+  background: white;
+  min-height: 800px;
+  transition: all 0.3s ease;
+}
+
+.resume-container iframe:hover {
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Responsive resume iframe */
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .resume-container iframe {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container iframe {
+    min-height: 500px;
+  }
+}
