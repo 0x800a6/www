@@ -132,6 +132,33 @@ function extract_php_variable($content, $variable_name)
     </p>
   </section>
 
+  <section id="vtubers-bio">
+    <h2 class="section-title">VTubers.bio</h2>
+    <p>
+      <strong>vtubers.bio</strong> is your own simple, personal space on the web—built for VTubers and managed by Lexi. For a flat $15 setup and $5 per edit, you get a custom site under the vtubers.bio domain (user.vtubers.bio or vtubers.bio/user), hosted and maintained for you. No ads, no tracking, no technical hassle.
+    </p>
+    <ul>
+      <li>Your own clean, direct page with your name, links, and work</li>
+      <li>Fully hosted—no server or file management needed</li>
+      <li>Customizable style: minimal or vibrant, your choice</li>
+      <li>No hidden fees: $15 to set up, $5 per change</li>
+      <li>Ad-free, privacy-respecting, always online</li>
+    </ul>
+    <p>
+      <strong>How it works:</strong> Contact Lexi on Discord (<code>@lrr.sh</code>), pay $15, and your page is built and delivered. Edits are $5 each.
+    </p>
+    <p>
+      <strong>Examples:</strong>
+      <br>
+      <a href="https://vtubers.bio/cottontail" target="_blank">vtubers.bio/cottontail</a> — Vibrant, animated, cosmic theme<br>
+      <a href="https://vtubers.bio/acvalens" target="_blank">vtubers.bio/acvalens</a> — Elegant succubus theme, live status, ASMR integration
+    </p>
+    <p>
+      <a href="https://vtubers.bio" target="_blank" class="btn btn-primary">Browse VTubers</a>
+      <a href="https://discord.com/users/0x800a6" target="_blank" class="btn btn-secondary">Message Lexi on Discord</a>
+    </p>
+  </section>
+
   <!-- Projects Portfolio -->
   <section id="projects">
     <h2 class="section-title">Projects</h2>
