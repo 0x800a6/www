@@ -17,3 +17,11 @@ fmt: ## Format Go code
 clean: ## Clean build artifacts
 	rm -rf www/bin/
 	rm -f www/main
+
+build-system: ## Build the system application
+	mkdir -p system/bin
+	cd system && gcc -o bin/main main.c -ljansson
+
+clean-system: ## Clean build artifacts
+	rm -rf system/bin/
+	find system -name '*.o' -type f -delete

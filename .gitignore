@@ -30,3 +30,6 @@ eshell/
 www/bin/
 www/main
 www/tmp
+
+# Ignore system build artifacts
+system/bin/
