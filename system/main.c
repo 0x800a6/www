@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/wait.h>
-#include <time.h>
 #include <jansson.h>
 
 #define PORT 3000
@@ -226,17 +225,49 @@ int main(void) {
             }
         } else if (starts_with(buffer, "GET / ")) {
             log_message("INFO", "GET / request received (root endpoint)");
-            const char root_response[] =
+            const char *html_content = 
+                "<!DOCTYPE html>\n"
+                "<html lang=\"en\">\n"
+                "<head>\n"
+                "    <meta charset=\"UTF-8\">\n"
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+                "    <title>Webhook Service</title>\n"
+                "    <style>\n"
+                "        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }\n"
+                "        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }\n"
+                "        h1 { color: #333; border-bottom: 2px solid #007acc; padding-bottom: 10px; }\n"
+                "        .status { background: #d4edda; color: #155724; padding: 15px; border-radius: 4px; margin: 20px 0; }\n"
+                "        .endpoint { background: #f8f9fa; padding: 15px; border-left: 4px solid #007acc; margin: 20px 0; }\n"
+                "        code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-family: monospace; }\n"
+                "    </style>\n"
+                "</head>\n"
+                "<body>\n"
+                "    <div class=\"container\">\n"
+                "        <h1>Webhook Service</h1>\n"
+                "        <div class=\"status\">\n"
+                "            <strong>✓ Service Active</strong><br>\n"
+                "            Webhook service is running and ready to receive requests.\n"
+                "        </div>\n"
+                "        <div class=\"endpoint\">\n"
+                "            <strong>Webhook Endpoint:</strong><br>\n"
+                "            <code>POST /webhook</code>\n"
+                "        </div>\n"
+                "        <p>This service handles GitHub webhook events for automated deployments.</p>\n"
+                "    </div>\n"
+                "</body>\n"
+                "</html>";
+            
+            char response[2048];
+            int content_length = strlen(html_content);
+            snprintf(response, sizeof(response),
                 "HTTP/1.1 200 OK\r\n"
-                "Content-Type: text/html\r\n"
-                "Content-Length: 156\r\n"
+                "Content-Type: text/html; charset=utf-8\r\n"
+                "Content-Length: %d\r\n"
                 "Access-Control-Allow-Origin: *\r\n"
+                "Cache-Control: no-cache\r\n"
                 "\r\n"
-                "<!DOCTYPE html><html><head><title>Webhook Service</title></head>"
-                "<body><h1>Webhook Service Active</h1>"
-                "<p>Service is running and ready to receive webhooks.</p>"
-                "<p>Endpoint: POST /webhook</p></body></html>";
-            send(new_socket, root_response, strlen(root_response), 0);
+                "%s", content_length, html_content);
+            send(new_socket, response, strlen(response), 0);
         } else if (starts_with(buffer, "OPTIONS ")) {
             log_message("INFO", "OPTIONS request received (CORS preflight)");
             // Handle CORS preflight requests for Cloudflare tunnel
