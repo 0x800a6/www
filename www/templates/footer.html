@@ -1,0 +1,166 @@
+{{define "footer"}}
+<footer id="footer" role="contentinfo">
+  <div class="footer-content">
+    <!-- Main Footer Sections -->
+    <div class="footer-main">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h4 class="footer-title">
+          <span class="brand-symbol" aria-hidden="true">λ</span> Lexi Rose
+          Rogers
+        </h4>
+        <p class="footer-description">
+          Software & Web Developer • Cosplayer • Anime Enthusiast • Privacy
+          Advocate
+        </p>
+        <div class="footer-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-text">Available for hire</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Quick Links</h4>
+        <div class="footer-links">
+          <a href="/#about"
+            ><i class="bi bi-person" aria-hidden="true"></i> About</a
+          >
+          <a href="/projects"
+            ><i class="bi bi-folder2-open" aria-hidden="true"></i> Projects</a
+          >
+          <a href="/resume"
+            ><i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+            Resume</a
+          >
+          <a href="/sitemap"
+            ><i class="bi bi-diagram-3" aria-hidden="true"></i> Sitemap</a
+          >
+          <a href="#" data-bs-toggle="modal" data-bs-target="#sponsorModal"
+            ><i class="bi bi-heart" aria-hidden="true"></i> Sponsor</a
+          >
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Projects</h4>
+        <div class="footer-links">
+          <a href="/projects?type=web"
+            ><i class="bi bi-globe" aria-hidden="true"></i> Web Development</a
+          >
+          <a href="/projects?type=tools"
+            ><i class="bi bi-tools" aria-hidden="true"></i> Tools & Utilities</a
+          >
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Connect</h4>
+        <div class="footer-social">
+          <a
+            href="https://github.com/0x800a6"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub - Follow me on GitHub"
+            aria-label="GitHub profile"
+          >
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a
+            href="mailto:lexi@lrr.sh"
+            title="Email - Send me an email"
+            aria-label="Send email"
+          >
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://woof.tech/@lrr"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Mastodon - Follow me on Mastodon"
+            aria-label="Mastodon profile"
+          >
+            <i class="bi bi-mastodon" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/lrr_dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Twitter - Follow me on Twitter"
+            aria-label="Twitter profile"
+          >
+            <i class="bi bi-twitter-x" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://bsky.app/profile/lrr.sh"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Bluesky - Follow me on Bluesky"
+            aria-label="Bluesky profile"
+          >
+            <i class="bi bi-cloud" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://matrix.to/#/@lrr.sh:matrix.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Matrix - Chat with me on Matrix"
+            aria-label="Matrix chat"
+          >
+            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://discord.com/users/1248626823638552701"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Discord - Connect with me on Discord"
+            aria-label="Discord profile"
+          >
+            <i class="bi bi-discord" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="footer-contact">
+          <p>
+            <i class="bi bi-envelope-at" aria-hidden="true"></i> lexi@lrr.sh
+          </p>
+          <p>
+            <i class="bi bi-geo-alt" aria-hidden="true"></i> Remote • Global
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <!-- Copyright & Credits -->
+        <div class="footer-copyright">
+          <p>&copy; {{.Site.Year}} Lexi Rose Rogers. All rights reserved.</p>
+        </div>
+
+        <!-- Open Source -->
+        <div class="footer-opensource">
+          <a
+            href="https://github.com/0x800a6/www"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opensource-link"
+            title="View source code on GitHub"
+          >
+            <i class="bi bi-github" aria-hidden="true"></i> Open Source
+          </a>
+          <span class="separator">•</span>
+          <a
+            href="https://github.com/0x800a6/www/blob/master/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MIT License</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{{end}}

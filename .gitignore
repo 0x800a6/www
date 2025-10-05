@@ -1,0 +1,32 @@
+# Ignore IDE-specific files
+.idea/
+.vscode/
+# Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+auto-save-list/
+tramp
+eshell/
+# Vim
+*.swp
+*.swo
+*.vim
+.vim/
+# Neovim
+*.nvim
+.nvim/
+
+# Common backup files
+*.bak
+*.tmp
+
+# Ignore system-specific files
+.DS_Store
+
+# Ignore Go build artifacts
+www/bin/
+www/main
+www/tmp

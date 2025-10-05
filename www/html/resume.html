@@ -1,0 +1,973 @@
+{{define "content"}}
+<!-- Resume Header -->
+<div class="resume-container" style="margin-top: 2rem">
+  <div class="resume-header">
+    <div class="header-content">
+      <h1 class="resume-name">
+        <span class="name-first">Lexi</span>
+        <span class="name-middle">Rose</span>
+        <span class="name-last">Rogers</span>
+      </h1>
+      <div class="resume-subtitle">
+        <p class="subtitle-main">Software & Web Developer</p>
+        <p class="subtitle-secondary">
+          Cosplayer • Anime Enthusiast • Privacy Advocate
+        </p>
+      </div>
+    </div>
+    <div class="header-contact">
+      <div class="contact-item">
+        <i class="bi bi-telephone"></i>
+        <span>(912) 406-2162</span>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-envelope"></i>
+        <span>lexi@lrr.sh</span>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-geo-alt"></i>
+        <span>Georgia, United States</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-heart"></i>
+      <span class="section-title">About Me</span>
+    </h2>
+    <div class="summary-content">
+      <p class="summary-text">
+        A passionate software & web developer, cosplayer, anime enthusiast, and
+        privacy advocate. My work spans from low-level C experiments (servers,
+        brute force tools) to TypeScript bots and Rust utilities. I build things
+        on Arch Linux, tweak endlessly, and explore both code and cosplay with
+        equal fervor.
+      </p>
+      <div class="values-grid">
+        <div class="value-item">
+          <i class="bi bi-shield-check"></i>
+          <span>Privacy Advocate</span>
+        </div>
+        <div class="value-item">
+          <i class="bi bi-code-slash"></i>
+          <span>Open Source</span>
+        </div>
+        <div class="value-item">
+          <i class="bi bi-people"></i>
+          <span>Community Driven</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-tools"></i>
+      <span class="section-title">Technical Skills</span>
+    </h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3 class="skill-title">Programming Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">C</span>
+          <span class="skill-tag primary">TypeScript</span>
+          <span class="skill-tag primary">JavaScript</span>
+          <span class="skill-tag primary">Go</span>
+          <span class="skill-tag">Rust</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="skill-title">Web Technologies</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">HTML5</span>
+          <span class="skill-tag primary">CSS3</span>
+          <span class="skill-tag primary">Bootstrap</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span>
+          <span class="skill-tag">Video.js</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="skill-title">Systems & Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Linux (Arch)</span>
+          <span class="skill-tag primary">Git</span>
+          <span class="skill-tag primary">CI/CD</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-star"></i>
+      <span class="section-title">Featured Projects</span>
+    </h2>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="project-header">
+          <h3 class="project-title">VTubers.TV</h3>
+          <span class="project-status">Active</span>
+        </div>
+        <p class="project-description">
+          A comprehensive streaming, upload, and social platform for VTubers.
+          Combines the best of X, YouTube, and Twitch, but built specifically
+          for creators who use avatars. Open-source, transparent, and focused on
+          fairness and safety.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">WebRTC</span>
+          <span class="tech-tag">Real-time</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">author.txt Specification</h3>
+          <span class="project-status">Specification</span>
+        </div>
+        <p class="project-description">
+          A machine-readable and human-readable specification for author
+          profiles and metadata. Supports blocks, typed keys, lists, and
+          multiline values for comprehensive creator information.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">DSL</span>
+          <span class="tech-tag">Specification</span>
+          <span class="tech-tag">Metadata</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">File Uploader</h3>
+          <span class="project-status">Secure</span>
+        </div>
+        <p class="project-description">
+          A secure, feature-rich file hosting service with both web interface
+          and CLI client. Built with privacy and security as core principles.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">CLI</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">AnimeStream</h3>
+          <span class="project-status">Archived</span>
+        </div>
+        <p class="project-description">
+          A personal anime streaming platform to watch, track, and discover
+          anime series. Integrated with Discord API for community features.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Discord API</span>
+          <span class="tech-tag">Video.js</span>
+          <span class="tech-tag">Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Contributions -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-github"></i>
+      <span class="section-title">Open Source</span>
+    </h2>
+    <div class="opensource-grid">
+      <div class="opensource-item">
+        <div class="opensource-icon">
+          <i class="bi bi-journal-text"></i>
+        </div>
+        <div class="opensource-content">
+          <h4>Personal Notes</h4>
+          <p>Collection of personal notes for life, synced with Obsidian</p>
+        </div>
+      </div>
+      <div class="opensource-item">
+        <div class="opensource-icon">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <div class="opensource-content">
+          <h4>Python Scripts</h4>
+          <p>Useful Python scripts for media downloading and management</p>
+        </div>
+      </div>
+      <div class="opensource-item">
+        <div class="opensource-icon">
+          <i class="bi bi-pencil-square"></i>
+        </div>
+        <div class="opensource-content">
+          <h4>Blog Repository</h4>
+          <p>Personal blog for sharing thoughts and technical articles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Interests -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-heart-fill"></i>
+      <span class="section-title">Beyond Code</span>
+    </h2>
+    <div class="interests-content">
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="bi bi-camera"></i>
+        </div>
+        <div class="interest-details">
+          <h4>Cosplay</h4>
+          <p>
+            Creative expression through character portrayal and costume design
+          </p>
+        </div>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="bi bi-tv"></i>
+        </div>
+        <div class="interest-details">
+          <h4>Anime Enthusiast</h4>
+          <p>
+            Passionate about Japanese animation and its creative storytelling
+          </p>
+        </div>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <div class="interest-details">
+          <h4>Privacy Advocacy</h4>
+          <p>Committed to digital rights and user privacy protection</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goals & Values -->
+  <section class="resume-section">
+    <h2 class="section-header">
+      <i class="bi bi-bullseye"></i>
+      <span class="section-title">Mission & Vision</span>
+    </h2>
+    <div class="goals-content">
+      <div class="goal-item">
+        <i class="bi bi-arrow-right-circle"></i>
+        <p>
+          Develop open-source tools that prioritize user privacy and security
+        </p>
+      </div>
+      <div class="goal-item">
+        <i class="bi bi-arrow-right-circle"></i>
+        <p>
+          Contribute to anime and cosplay communities through creative projects
+        </p>
+      </div>
+      <div class="goal-item">
+        <i class="bi bi-arrow-right-circle"></i>
+        <p>
+          Build supportive networks of like-minded individuals in tech and
+          fandom spaces
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="resume-footer">
+    <div class="footer-social">
+      <a
+        href="https://github.com/0x800a6"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="mailto:lexi@lrr.sh">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://x.com/lrr_dev" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a
+        href="https://woof.tech/@lrr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="bi bi-mastodon"></i>
+      </a>
+      <a
+        href="https://discord.com/users/1248626823638552701"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="bi bi-discord"></i>
+      </a>
+    </div>
+    <p class="footer-note">
+      <i class="bi bi-lightbulb"></i>
+      <span>
+        Compile, wait for 20 minutes, notice a new commit, compile again.
+      </span>
+    </p>
+  </div>
+</div>
+
+<style>
+  /* Import beautiful fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap");
+
+  .resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resume-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--red),
+      var(--orange),
+      var(--yellow),
+      var(--green),
+      var(--aqua),
+      var(--blue),
+      var(--purple)
+    );
+    border-radius: 16px 16px 0 0;
+  }
+
+  /* Header Styles */
+  .resume-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  .resume-name {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #d79921, #fe8019, #cc241d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that don't support background-clip */
+    animation: nameGlow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes nameGlow {
+    0% {
+      filter: drop-shadow(0 0 5px rgba(215, 153, 33, 0.3));
+    }
+    100% {
+      filter: drop-shadow(0 0 15px rgba(215, 153, 33, 0.6));
+    }
+  }
+
+  /* Fallback for browsers that don't support background-clip: text */
+  @supports not (-webkit-background-clip: text) {
+    .resume-name {
+      color: #d79921; /* Gruvbox yellow */
+      background: none;
+    }
+  }
+
+  .name-first,
+  .name-middle,
+  .name-last {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .name-first:hover,
+  .name-middle:hover,
+  .name-last:hover {
+    transform: scale(1.05);
+  }
+
+  .resume-subtitle {
+    margin: 1rem 0;
+  }
+
+  .subtitle-main {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--aqua);
+    margin: 0.5rem 0;
+    font-style: italic;
+  }
+
+  .subtitle-secondary {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .header-contact {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    color: var(--fg);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px var(--shadow);
+  }
+
+  .contact-item:hover {
+    background: var(--border);
+    border-color: var(--aqua);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+  }
+
+  .contact-item i {
+    color: var(--blue);
+    font-size: 1rem;
+  }
+
+  /* Section Styles */
+  .resume-section {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    position: relative;
+  }
+
+  .section-header i {
+    font-size: 1.5rem;
+    color: var(--yellow);
+    background: var(--bg);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .section-header:hover i {
+    background: var(--yellow);
+    color: var(--bg);
+    transform: rotate(360deg);
+  }
+
+  .section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--green);
+    font-style: italic;
+  }
+
+  /* Summary Section */
+  .summary-content {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  .summary-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--fg);
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .value-item:hover {
+    background: var(--border);
+    transform: translateY(-2px);
+  }
+
+  .value-item i {
+    font-size: 1.2rem;
+    color: var(--aqua);
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .skill-category {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+  }
+
+  .skill-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+
+  .skill-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--fg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-tag.primary {
+    background: linear-gradient(135deg, var(--blue), var(--aqua));
+    color: var(--bg);
+    border-color: var(--aqua);
+    font-weight: 500;
+  }
+
+  .skill-tag:hover {
+    background: var(--yellow);
+    color: var(--bg);
+    border-color: var(--yellow);
+    transform: scale(1.05);
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card.featured {
+    border: 2px solid var(--yellow);
+    background: linear-gradient(135deg, var(--bg), var(--bg-secondary));
+  }
+
+  .project-card.featured::before {
+    content: "⭐";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  @keyframes sparkle {
+    0%,
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+    }
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px var(--shadow);
+    border-color: var(--aqua);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--green);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .project-status {
+    padding: 0.25rem 0.75rem;
+    background: var(--green);
+    color: var(--bg);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .project-description {
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    color: var(--fg);
+    margin-bottom: 1.5rem;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--aqua);
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.3s ease;
+  }
+
+  .tech-tag:hover {
+    background: var(--aqua);
+    color: var(--bg);
+  }
+
+  /* Open Source Section */
+  .opensource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .opensource-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .opensource-item:hover {
+    background: var(--border);
+    transform: translateY(-2px);
+  }
+
+  .opensource-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .opensource-content h4 {
+    font-family: "Playfair Display", serif;
+    color: var(--yellow);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .opensource-content p {
+    color: var(--gray);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Interests Section */
+  .interests-content {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .interest-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .interest-item:hover {
+    background: var(--border);
+    transform: translateX(8px);
+  }
+
+  .interest-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--red), var(--orange));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .interest-details h4 {
+    font-family: "Playfair Display", serif;
+    color: var(--green);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .interest-details p {
+    color: var(--fg);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Goals Section */
+  .goals-content {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .goal-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .goal-item:last-child {
+    border-bottom: none;
+  }
+
+  .goal-item i {
+    color: var(--aqua);
+    font-size: 1.2rem;
+  }
+
+  .goal-item p {
+    color: var(--fg);
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .resume-footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 2px solid var(--border);
+    margin-top: 2rem;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    color: var(--fg);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .footer-social a:hover {
+    background: var(--border);
+    color: var(--aqua);
+    transform: translateY(-2px);
+  }
+
+  .footer-note {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin: 0;
+    font-style: italic;
+  }
+
+  .footer-note i {
+    color: var(--red);
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .resume-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .resume-name {
+      font-size: 3rem;
+    }
+
+    .header-contact {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .opensource-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .interest-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-social {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Print Styles */
+  @media print {
+    .resume-container {
+      box-shadow: none;
+      border: 1px solid #ccc;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .contact-item:hover,
+    .project-card:hover,
+    .skill-category:hover {
+      transform: none;
+    }
+
+    .resume-name {
+      -webkit-text-fill-color: initial;
+      color: var(--yellow);
+    }
+  }
+</style>
+{{end}}

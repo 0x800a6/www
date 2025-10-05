@@ -1,0 +1,1317 @@
+{{define "content"}}
+<!-- Projects Header -->
+<header>
+  <h1 id="title"><i class="bi bi-folder2-open"></i> Projects</h1>
+  <p>
+    A showcase of my open-source projects, experiments, and contributions. From
+    web development to system tools, each project represents a learning journey
+    and a solution to a real problem.
+  </p>
+</header>
+
+<!-- Projects Content -->
+<section id="projects-content">
+  <!-- Search and Filter Controls -->
+  <div class="projects-controls">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <i class="bi bi-search search-icon"></i>
+        <input
+          type="text"
+          id="projectSearch"
+          class="search-input"
+          placeholder="Search projects by name, description, or technology... (Ctrl+K to focus)"
+          autocomplete="off"
+        />
+        <button class="search-clear" id="searchClear" style="display: none">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-controls">
+      <div class="filter-group">
+        <label for="statusFilter" class="filter-label">Status:</label>
+        <select id="statusFilter" class="filter-select">
+          <option value="">All Status</option>
+          <option value="active">Active</option>
+          <option value="archived">Archived</option>
+          <option value="specification">Specification</option>
+          <option value="secure">Secure</option>
+          <option value="template">Template</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="languageFilter" class="filter-label">Language:</label>
+        <select id="languageFilter" class="filter-select">
+          <option value="">All Languages</option>
+          <option value="typescript">TypeScript</option>
+          <option value="python">Python</option>
+          <option value="rust">Rust</option>
+          <option value="php">PHP</option>
+          <option value="c">C</option>
+          <option value="multiple">Multiple</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="categoryFilter" class="filter-label">Category:</label>
+        <select id="categoryFilter" class="filter-select">
+          <option value="">All Categories</option>
+          <option value="featured">Featured</option>
+          <option value="tools">Development Tools</option>
+          <option value="fun">Fun Projects</option>
+          <option value="templates">Templates & Utilities</option>
+        </select>
+      </div>
+
+      <button class="filter-reset" id="filterReset">
+        <i class="bi bi-arrow-clockwise"></i> Reset Filters
+      </button>
+    </div>
+
+    <div class="results-info">
+      <span id="resultsCount">Loading projects...</span>
+    </div>
+  </div>
+
+  <!-- Featured Projects -->
+  <div class="projects-section" data-category="featured">
+    <h2 class="section-title">
+      <i class="bi bi-star-fill"></i> Featured Projects
+    </h2>
+    <div class="projects-grid">
+      <!-- VTubers.TV -->
+      <div
+        class="project-card featured"
+        data-status="active"
+        data-language="typescript"
+        data-category="featured"
+        data-tech="typescript,node.js,webrtc,real-time"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-tv"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">VTubers.TV</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A comprehensive streaming, upload, and social platform for VTubers.
+          Combines the best of X, YouTube, and Twitch, but built specifically
+          for creators who use avatars. Open-source, transparent, and focused on
+          fairness and safety.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">WebRTC</span>
+          <span class="tech-tag">Real-time</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/VTubersTV"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="#" class="project-link disabled">
+            <i class="bi bi-globe"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- author.txt Specification -->
+      <div
+        class="project-card"
+        data-status="specification"
+        data-language="typescript"
+        data-category="featured"
+        data-tech="dsl,specification,metadata"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-file-text"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">author.txt Specification</h3>
+            <div class="project-meta">
+              <span class="project-status specification">Specification</span>
+              <span class="project-language">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A machine-readable and human-readable specification for author
+          profiles and metadata. Supports blocks, typed keys, lists, and
+          multiline values for comprehensive creator information.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">DSL</span>
+          <span class="tech-tag">Specification</span>
+          <span class="tech-tag">Metadata</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/author.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- File Uploader -->
+      <div
+        class="project-card"
+        data-status="secure"
+        data-language="php"
+        data-category="featured"
+        data-tech="php,cli,security,encryption"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-cloud-upload"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">File Uploader</h3>
+            <div class="project-meta">
+              <span class="project-status secure">Secure</span>
+              <span class="project-language">PHP</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A secure, feature-rich file hosting service with both web interface
+          and CLI client. Built with privacy and security as core principles,
+          featuring encryption and access controls.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">CLI</span>
+          <span class="tech-tag">Security</span>
+          <span class="tech-tag">Encryption</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/file_uploader"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Development Tools -->
+  <div class="projects-section" data-category="tools">
+    <h2 class="section-title"><i class="bi bi-tools"></i> Development Tools</h2>
+    <div class="projects-grid">
+      <!-- Terminal Notes -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="python"
+        data-category="tools"
+        data-tech="python,terminal,markdown,cli"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-terminal"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Terminal Notes</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">Python</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A feature-rich, keyboard-driven, markdown-compatible note-taking app
+          that runs entirely in your terminal. Built with curses and rich for a
+          clean and efficient terminal UI.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Terminal</span>
+          <span class="tech-tag">Markdown</span>
+          <span class="tech-tag">CLI</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/terminal-notes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Dotfiles -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="python"
+        data-category="tools"
+        data-tech="python,linux,automation,config"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-gear"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Dotfiles</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">Python</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A comprehensive dotfiles management system that automates the
+          synchronization, installation, and maintenance of system
+          configurations across different environments.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Linux</span>
+          <span class="tech-tag">Automation</span>
+          <span class="tech-tag">Config</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/dotfiles"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Flux Shell -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="rust"
+        data-category="tools"
+        data-tech="rust,shell,cli,performance"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-terminal-dash"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Flux Shell</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">Rust</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          An advanced, customizable shell for modern systems. Built with Rust
+          for performance and safety, featuring modern shell features and
+          extensive customization options.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Rust</span>
+          <span class="tech-tag">Shell</span>
+          <span class="tech-tag">CLI</span>
+          <span class="tech-tag">Performance</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/flux"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun Projects -->
+  <div class="projects-section" data-category="fun">
+    <h2 class="section-title"><i class="bi bi-heart"></i> Fun Projects</h2>
+    <div class="projects-grid">
+      <!-- Anime Downloader -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="python"
+        data-category="fun"
+        data-tech="python,gui,api,media"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-download"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Anime Downloader</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">Python</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A modern, user-friendly GUI application for downloading anime episodes
+          using the powerful anipy-api. Features a clean interface and batch
+          downloading capabilities.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">GUI</span>
+          <span class="tech-tag">API</span>
+          <span class="tech-tag">Media</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/anime_downloader"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LGBTQ+ Flags -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="c"
+        data-category="fun"
+        data-tech="c,terminal,ansi,colors"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-flag"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">LGBTQ+ Pride Flags</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">C</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A command-line tool that displays various LGBTQ+ pride flags in the
+          terminal using ANSI color codes. A celebration of diversity and
+          inclusion in tech.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">Terminal</span>
+          <span class="tech-tag">ANSI</span>
+          <span class="tech-tag">Colors</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/lgbt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- AnimeStream (Archived) -->
+      <div
+        class="project-card archived"
+        data-status="archived"
+        data-language="typescript"
+        data-category="fun"
+        data-tech="typescript,discord-api,video.js,bootstrap"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-play-circle"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">AnimeStream</h3>
+            <div class="project-meta">
+              <span class="project-status archived">Archived</span>
+              <span class="project-language">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A personal anime streaming platform to watch, track, and discover
+          anime series. Integrated with Discord API for community features.
+          Archived but still available for reference.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Discord API</span>
+          <span class="tech-tag">Video.js</span>
+          <span class="tech-tag">Bootstrap</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/AnimeStream"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repository Templates -->
+  <div class="projects-section" data-category="templates">
+    <h2 class="section-title">
+      <i class="bi bi-layers"></i> Templates & Utilities
+    </h2>
+    <div class="projects-grid">
+      <!-- Repository Templates -->
+      <div
+        class="project-card"
+        data-status="template"
+        data-language="multiple"
+        data-category="templates"
+        data-tech="template,github,ci/cd,workflows"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-file-earmark-code"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Repository Templates</h3>
+            <div class="project-meta">
+              <span class="project-status template">Template</span>
+              <span class="project-language">Multiple</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A complete GitHub repository template with workflows, issue templates,
+          and project management files. Designed to bootstrap new projects with
+          best practices.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Template</span>
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">Workflows</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/repo-templates"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Scripts Collection -->
+      <div
+        class="project-card"
+        data-status="active"
+        data-language="python"
+        data-category="templates"
+        data-tech="python,scripts,utilities,media"
+      >
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Python Scripts</h3>
+            <div class="project-meta">
+              <span class="project-status active">Active</span>
+              <span class="project-language">Python</span>
+            </div>
+          </div>
+        </div>
+        <p class="project-description">
+          A collection of useful Python scripts for various tasks, primarily
+          focused on media downloading and management. Handy utilities for
+          everyday development tasks.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Scripts</span>
+          <span class="tech-tag">Utilities</span>
+          <span class="tech-tag">Media</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/0x800a6/scripts"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="projects-cta">
+    <div class="cta-content">
+      <h3>Want to collaborate?</h3>
+      <p>
+        I'm always interested in new projects and collaborations. Whether you
+        have an idea for a new tool, want to contribute to an existing project,
+        or just want to chat about development, feel free to reach out!
+      </p>
+      <div class="cta-links">
+        <a href="mailto:lexi@lrr.sh" class="cta-link primary">
+          <i class="bi bi-envelope"></i> Get in Touch
+        </a>
+        <a
+          href="https://github.com/0x800a6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-link secondary"
+        >
+          <i class="bi bi-github"></i> View All Repositories
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Search and Filter Controls */
+  .projects-controls {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  .search-container {
+    margin-bottom: 2rem;
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 3rem;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    color: var(--fg);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--aqua);
+    box-shadow: 0 4px 16px rgba(104, 157, 106, 0.2);
+  }
+
+  .search-input::placeholder {
+    color: var(--gray);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blue);
+    font-size: 1.2rem;
+    pointer-events: none;
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--gray);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .search-clear:hover {
+    background: var(--border);
+    color: var(--red);
+    border-color: var(--red);
+  }
+
+  .filter-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: end;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-label {
+    color: var(--yellow);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .filter-select {
+    padding: 0.75rem 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--fg);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--aqua);
+    box-shadow: 0 0 0 2px rgba(104, 157, 106, 0.2);
+  }
+
+  .filter-select option {
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  .filter-reset {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--fg);
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .filter-reset:hover {
+    background: var(--border);
+    color: var(--aqua);
+    border-color: var(--aqua);
+  }
+
+  .results-info {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .results-info span {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .projects-section {
+    margin-bottom: 4rem;
+  }
+
+  .projects-section .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--yellow);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .projects-section .section-title i {
+    color: var(--aqua);
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card.featured {
+    border: 2px solid var(--yellow);
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg));
+    box-shadow: 0 4px 20px rgba(215, 153, 33, 0.1);
+  }
+
+  .project-card.featured::before {
+    content: "⭐";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .project-card.archived {
+    opacity: 0.8;
+    border-color: var(--gray);
+  }
+
+  .project-card.archived::before {
+    content: "📦";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  @keyframes sparkle {
+    0%,
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+    }
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px var(--shadow);
+    border-color: var(--aqua);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--blue), var(--aqua));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .project-info {
+    flex: 1;
+  }
+
+  .project-title {
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .project-status.active {
+    background: var(--green);
+    color: var(--bg);
+  }
+
+  .project-status.specification {
+    background: var(--blue);
+    color: var(--bg);
+  }
+
+  .project-status.secure {
+    background: var(--aqua);
+    color: var(--bg);
+  }
+
+  .project-status.template {
+    background: var(--purple);
+    color: var(--bg);
+  }
+
+  .project-status.archived {
+    background: var(--gray);
+    color: var(--bg);
+  }
+
+  .project-language {
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .project-description {
+    color: var(--fg);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    background: var(--bg);
+    color: var(--aqua);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .tech-tag:hover {
+    background: var(--border);
+    color: var(--yellow);
+    border-color: var(--aqua);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .project-link:hover {
+    background: var(--border);
+    color: var(--aqua);
+    border-color: var(--aqua);
+    transform: translateY(-1px);
+  }
+
+  .project-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .project-link i {
+    font-size: 1rem;
+  }
+
+  /* Call to Action */
+  .projects-cta {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-content h3 {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    color: var(--fg);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .cta-link.primary {
+    background: var(--blue);
+    color: var(--bg);
+    border: 1px solid var(--blue);
+  }
+
+  .cta-link.primary:hover {
+    background: var(--aqua);
+    color: var(--bg);
+    transform: translateY(-2px);
+  }
+
+  .cta-link.secondary {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+  }
+
+  .cta-link.secondary:hover {
+    background: var(--border);
+    color: var(--aqua);
+    border-color: var(--aqua);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .projects-controls {
+      padding: 1.5rem;
+    }
+
+    .search-input {
+      padding: 0.875rem 2.5rem 0.875rem 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    .search-icon {
+      left: 0.875rem;
+      font-size: 1.1rem;
+    }
+
+    .search-clear {
+      right: 0.875rem;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .filter-controls {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .filter-reset {
+      justify-content: center;
+      padding: 0.875rem 1rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .project-card {
+      padding: 1rem;
+    }
+
+    .project-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    .project-icon {
+      align-self: center;
+    }
+
+    .project-meta {
+      justify-content: center;
+    }
+
+    .project-links {
+      justify-content: center;
+    }
+
+    .cta-links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-link {
+      width: 100%;
+      max-width: 200px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .projects-section .section-title {
+      font-size: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+    }
+
+    .projects-cta {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all project cards
+    const projectCards = document.querySelectorAll(".project-card");
+    const searchInput = document.getElementById("projectSearch");
+    const searchClear = document.getElementById("searchClear");
+    const statusFilter = document.getElementById("statusFilter");
+    const languageFilter = document.getElementById("languageFilter");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const filterReset = document.getElementById("filterReset");
+    const resultsCount = document.getElementById("resultsCount");
+
+    // Store original project cards for reset functionality
+    const originalCards = Array.from(projectCards);
+
+    // Function to update results count
+    function updateResultsCount(visibleCount) {
+      const totalCount = originalCards.length;
+      if (visibleCount === totalCount) {
+        resultsCount.textContent = `Showing all ${totalCount} projects`;
+      } else {
+        resultsCount.textContent = `Showing ${visibleCount} of ${totalCount} projects`;
+      }
+    }
+
+    // Function to check if a card matches the current filters
+    function cardMatchesFilters(card) {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const statusValue = statusFilter.value;
+      const languageValue = languageFilter.value;
+      const categoryValue = categoryFilter.value;
+
+      // Search filter
+      if (searchTerm) {
+        const title = card
+          .querySelector(".project-title")
+          .textContent.toLowerCase();
+        const description = card
+          .querySelector(".project-description")
+          .textContent.toLowerCase();
+        const techTags = Array.from(card.querySelectorAll(".tech-tag")).map(
+          (tag) => tag.textContent.toLowerCase()
+        );
+        const allText = [title, description, ...techTags].join(" ");
+
+        if (!allText.includes(searchTerm)) {
+          return false;
+        }
+      }
+
+      // Status filter
+      if (statusValue && card.dataset.status !== statusValue) {
+        return false;
+      }
+
+      // Language filter
+      if (languageValue && card.dataset.language !== languageValue) {
+        return false;
+      }
+
+      // Category filter
+      if (categoryValue && card.dataset.category !== categoryValue) {
+        return false;
+      }
+
+      return true;
+    }
+
+    // Function to filter and display projects
+    function filterProjects() {
+      let visibleCount = 0;
+
+      projectCards.forEach((card) => {
+        const matches = cardMatchesFilters(card);
+
+        if (matches) {
+          card.style.display = "flex";
+          card.style.opacity = "1";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+          card.style.opacity = "0";
+        }
+      });
+
+      // Hide empty sections
+      document.querySelectorAll(".projects-section").forEach((section) => {
+        const visibleCards = section.querySelectorAll(
+          '.project-card[style*="display: flex"], .project-card:not([style*="display: none"])'
+        );
+        if (visibleCards.length === 0) {
+          section.style.display = "none";
+        } else {
+          section.style.display = "block";
+        }
+      });
+
+      updateResultsCount(visibleCount);
+    }
+
+    // Search input event listener
+    searchInput.addEventListener("input", function () {
+      if (this.value.trim()) {
+        searchClear.style.display = "block";
+      } else {
+        searchClear.style.display = "none";
+      }
+      filterProjects();
+    });
+
+    // Search clear button
+    searchClear.addEventListener("click", function () {
+      searchInput.value = "";
+      this.style.display = "none";
+      filterProjects();
+    });
+
+    // Filter change event listeners
+    [statusFilter, languageFilter, categoryFilter].forEach((filter) => {
+      filter.addEventListener("change", filterProjects);
+    });
+
+    // Reset filters button
+    filterReset.addEventListener("click", function () {
+      searchInput.value = "";
+      searchClear.style.display = "none";
+      statusFilter.value = "";
+      languageFilter.value = "";
+      categoryFilter.value = "";
+      filterProjects();
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener("keydown", function (e) {
+      // Focus search input with Ctrl+K or Cmd+K
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        searchInput.focus();
+      }
+
+      // Clear search with Escape
+      if (e.key === "Escape" && document.activeElement === searchInput) {
+        searchInput.value = "";
+        searchClear.style.display = "none";
+        filterProjects();
+      }
+    });
+
+    // Initial filter
+    filterProjects();
+
+    // Add smooth transitions
+    projectCards.forEach((card) => {
+      card.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    });
+  });
+</script>
+{{end}}

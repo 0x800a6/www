@@ -1,0 +1,242 @@
+{{define "content"}}
+<!-- Sitemap Header -->
+<header>
+  <h1 id="title"><i class="bi bi-diagram-3"></i> Sitemap</h1>
+  <p>
+    A complete overview of all pages on this website. This sitemap helps search
+    engines and visitors navigate the site structure.
+  </p>
+</header>
+
+<!-- Sitemap Content -->
+<section id="sitemap-content">
+  <div class="sitemap-pages">
+    <h2 class="section-title">Site Pages</h2>
+    <div class="row">
+      {{range .Page.Data}}
+      <div class="col-md-6 col-lg-4 mb-3">
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <h5 class="sitemap-page-title">
+              <a href="{{.Path}}" class="sitemap-link">
+                {{if eq .Path "/"}}
+                <i class="bi bi-house"></i>
+                {{else if eq .Path "/sitemap"}}
+                <i class="bi bi-diagram-3"></i>
+                {{else if eq .Path "/about"}}
+                <i class="bi bi-person"></i>
+                {{else if eq .Path "/posts"}}
+                <i class="bi bi-journal-text"></i>
+                {{else if eq .Path "/resume"}}
+                <i class="bi bi-file-earmark-person"></i>
+                {{else}}
+                <i class="bi bi-file-text"></i>
+                {{end}} {{.Title}}
+              </a>
+            </h5>
+          </div>
+          <div class="sitemap-card-body">
+            <div class="sitemap-meta">
+              <div class="sitemap-meta-item">
+                <span class="sitemap-label">URL:</span>
+                <code class="sitemap-url">{{.Path}}</code>
+              </div>
+              <div class="sitemap-meta-item">
+                <span class="sitemap-label">Last Modified:</span>
+                <span class="sitemap-date"
+                  >{{.LastMod.Format "January 2, 2006"}}</span
+                >
+              </div>
+              <div class="sitemap-meta-item">
+                <span class="sitemap-label">Update Frequency:</span>
+                <span class="sitemap-frequency">{{.ChangeFreq}}</span>
+              </div>
+              <div class="sitemap-meta-item">
+                <span class="sitemap-label">Priority:</span>
+                <span class="sitemap-priority">{{.Priority}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+
+  <!-- Additional Information -->
+  <section id="sitemap-info">
+    <h2 class="section-title">About This Sitemap</h2>
+    <div class="sitemap-details">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>For Search Engines</h5>
+          <p>
+            The XML sitemap at <code>/sitemap.xml</code> follows the
+            <a
+              href="https://www.sitemaps.org/protocol.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sitemap Protocol
+            </a>
+            and helps search engines discover and index all pages on this site.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5>For Visitors</h5>
+          <p>
+            This human-readable sitemap provides an overview of the site
+            structure and helps visitors navigate to different sections of the
+            website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<style>
+  .sitemap-info {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .sitemap-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sitemap-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    height: 100%;
+  }
+
+  .sitemap-card:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .sitemap-card-header {
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sitemap-card-body {
+    padding: 1rem;
+  }
+
+  .sitemap-page-title {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .sitemap-link {
+    color: var(--fg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .sitemap-link:hover {
+    color: var(--yellow);
+    text-decoration: none;
+  }
+
+  .sitemap-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sitemap-meta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .sitemap-label {
+    font-weight: 500;
+    color: var(--fg-secondary);
+  }
+
+  .sitemap-url {
+    background: var(--bg);
+    color: var(--aqua);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+
+  .sitemap-date {
+    color: var(--green);
+  }
+
+  .sitemap-frequency {
+    color: var(--blue);
+    text-transform: capitalize;
+  }
+
+  .sitemap-priority {
+    color: var(--orange);
+    font-weight: 500;
+  }
+
+  .sitemap-details {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .sitemap-details h5 {
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sitemap-details p {
+    margin: 0;
+    color: var(--fg-secondary);
+  }
+
+  .sitemap-details code {
+    background: var(--bg);
+    color: var(--aqua);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .sitemap-details a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .sitemap-details a:hover {
+    color: var(--aqua);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .sitemap-meta-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
+  }
+</style>
+{{end}}

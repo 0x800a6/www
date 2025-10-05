@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Include CSS -->
+    {{template "head-css" .}}
+  </head>
+  <body
+    class="container"
+    id="page-body"
+    data-bs-spy="scroll"
+    data-bs-target="#navigation"
+    data-bs-offset="100"
+  >
+    <!-- Skip Navigation Links -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#navigation" class="skip-link">Skip to navigation</a>
+    <a href="#footer" class="skip-link">Skip to footer</a>
+    <!-- Include header -->
+    {{template "header" .}}
+
+    <main id="main-content" role="main">
+      <div class="container">
+        <div class="content">
+          <!-- Page content will be inserted here -->
+          {{template "content" .}}
+        </div>
+      </div>
+    </main>
+
+    <!-- Include footer -->
+    {{template "footer" .}}
+
+    <!-- Include JavaScript -->
+    {{template "footer-js" .}}
+  </body>
+</html>

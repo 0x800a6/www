@@ -1,0 +1,228 @@
+{{define "header"}}
+<nav
+  id="navigation"
+  class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm"
+  role="navigation"
+  aria-label="Main navigation"
+>
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold text-warning" href="/">
+      <span class="brand-symbol">λ</span> Lexi
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navlinks"
+      aria-controls="navlinks"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navlinks">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" role="menubar">
+        <li class="nav-item" role="none">
+          <a class="nav-link px-3" href="/#about" role="menuitem">About</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a class="nav-link px-3" href="/projects" role="menuitem">Projects</a>
+        </li>
+        <!-- Extra Dropdown -->
+        <li class="nav-item dropdown" role="none">
+          <a
+            class="nav-link dropdown-toggle px-3"
+            href="#"
+            id="extraDropdown"
+            role="menuitem"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Extra
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="extraDropdown" role="menu">
+            <li role="none">
+              <a class="dropdown-item" href="/resume" role="menuitem">
+                <i class="bi bi-book" aria-hidden="true"></i> Resume
+              </a>
+            </li>
+            <li role="none">
+              <a class="dropdown-item" href="/sitemap" role="menuitem">
+                <i class="bi bi-map" aria-hidden="true"></i> Sitemap
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="nav-item d-flex align-items-center gap-2"
+          style="padding-right: 0.75rem"
+          role="none"
+        >
+          <a
+            href="#"
+            class="social-link sponsor-trigger"
+            title="Sponsor my work"
+            style="font-size: 0.95em; padding: 0.2em 0.4em"
+            data-bs-toggle="modal"
+            data-bs-target="#sponsorModal"
+            role="menuitem"
+            aria-label="Open sponsor modal"
+          >
+            <i
+              class="bi bi-heart"
+              style="font-size: 1em; color: var(--red); fill: var(--red)"
+              aria-hidden="true"
+            ></i>
+            <span style="font-size: 0.95em">Sponsor</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sponsor Modal -->
+<div
+  class="modal fade"
+  id="sponsorModal"
+  tabindex="-1"
+  aria-labelledby="sponsorModalLabel"
+  aria-describedby="sponsorModalDescription"
+  aria-hidden="true"
+  role="dialog"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sponsorModalLabel">
+          <i class="bi bi-heart-fill sponsor-heart" aria-hidden="true"></i>
+          Support My Work
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close sponsor modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-description" id="sponsorModalDescription">
+          If you find my work helpful, consider supporting me on one of these
+          platforms:
+        </p>
+        <div class="sponsor-options">
+          <a
+            href="https://github.com/sponsors/0x800a6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-option github-option"
+          >
+            <div class="sponsor-icon">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </div>
+            <div class="sponsor-content">
+              <div class="sponsor-header">
+                <h6>GitHub Sponsors</h6>
+                <span
+                  class="sponsor-badge recommended"
+                  aria-label="Recommended option"
+                  >Recommended</span
+                >
+              </div>
+              <p>Monthly recurring support</p>
+            </div>
+          </a>
+          <a
+            href="https://ko-fi.com/lrr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-option ko-fi-option"
+          >
+            <div class="sponsor-icon">
+              <i class="bi bi-cup-hot" aria-hidden="true"></i>
+            </div>
+            <div class="sponsor-content">
+              <div class="sponsor-header">
+                <h6>Ko-fi</h6>
+                <span
+                  class="sponsor-badge quick"
+                  aria-label="Quick donation option"
+                  >Quick</span
+                >
+              </div>
+              <p>One-time donations</p>
+            </div>
+          </a>
+        </div>
+        <div class="sponsor-footer">
+          <p>
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            All support helps me continue creating open-source projects and
+            content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Gruvbox Dark inspired */
+  .navbar {
+    background-color: var(--bg) !important;
+  }
+
+  .navbar-brand {
+    color: var(--yellow) !important;
+    /* yellow from Gruvbox */
+  }
+
+  .navbar-brand .brand-symbol {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--purple);
+    /* pink/purple accent */
+    margin-right: 4px;
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--fg) !important;
+    transition: color 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: var(--yellow) !important;
+  }
+
+  .navbar-toggler {
+    border: 2px solid var(--yellow);
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-toggler:hover {
+    background: var(--border);
+    border-color: var(--aqua);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem var(--yellow);
+    opacity: 0.25;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fabd2f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.2em;
+    height: 1.2em;
+  }
+</style>
+
+{{end}}

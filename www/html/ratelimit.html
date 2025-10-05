@@ -1,0 +1,259 @@
+{{define "content"}}
+<!-- Rate Limit Header -->
+<header>
+  <h1 id="title">
+    <i class="bi bi-shield-exclamation"></i> Rate Limit Exceeded
+  </h1>
+  <p>
+    You've made too many requests in a short period. Please wait a moment before
+    trying again.
+  </p>
+</header>
+
+<!-- Rate Limit Content -->
+<section id="ratelimit-content">
+  <div class="ratelimit-info">
+    <div class="ratelimit-card">
+      <div class="ratelimit-icon">
+        <i class="bi bi-clock-history"></i>
+      </div>
+      <h3>Too Many Requests</h3>
+      <p>
+        Our server has detected an unusually high number of requests from your
+        IP address. This rate limiting helps ensure fair access for all visitors
+        and protects against potential abuse.
+      </p>
+    </div>
+
+    <div class="ratelimit-details">
+      <h4>What does this mean?</h4>
+      <ul class="ratelimit-list">
+        <li>
+          <i class="bi bi-check-circle"></i> You can still browse the site
+          normally
+        </li>
+        <li>
+          <i class="bi bi-check-circle"></i> Just wait a few minutes before
+          making more requests
+        </li>
+        <li>
+          <i class="bi bi-check-circle"></i> This is a temporary restriction
+        </li>
+        <li>
+          <i class="bi bi-check-circle"></i> Your access will be restored
+          automatically
+        </li>
+      </ul>
+    </div>
+
+    <div class="ratelimit-actions">
+      <h4>What can you do?</h4>
+      <div class="action-buttons">
+        <a href="/" class="btn btn-primary">
+          <i class="bi bi-house"></i> Go to Homepage
+        </a>
+        <button onclick="location.reload()" class="btn btn-outline-primary">
+          <i class="bi bi-arrow-clockwise"></i> Try Again
+        </button>
+      </div>
+    </div>
+
+    <div class="ratelimit-footer">
+      <p>
+        <i class="bi bi-info-circle"></i>
+        If you believe this is an error or need assistance, please contact us.
+        Rate limits are typically reset within a few seconds depending on the
+        endpoint.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ratelimit-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .ratelimit-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--red);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(204, 36, 29, 0.1);
+  }
+
+  .ratelimit-icon {
+    font-size: 4rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+  }
+
+  .ratelimit-card h3 {
+    color: var(--red);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .ratelimit-card p {
+    color: var(--fg-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .ratelimit-details {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ratelimit-details h4 {
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ratelimit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ratelimit-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--fg-secondary);
+  }
+
+  .ratelimit-list i {
+    color: var(--green);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .ratelimit-actions {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ratelimit-actions h4 {
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .action-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .action-buttons .btn-primary {
+    background: var(--blue);
+    color: var(--bg);
+  }
+
+  .action-buttons .btn-primary:hover {
+    background: var(--aqua);
+    color: var(--bg);
+  }
+
+  .action-buttons .btn-secondary {
+    background: var(--fg-secondary);
+    color: var(--bg);
+  }
+
+  .action-buttons .btn-secondary:hover {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  .action-buttons .btn-outline-primary {
+    background: transparent;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+
+  .action-buttons .btn-outline-primary:hover {
+    background: var(--blue);
+    color: var(--bg);
+  }
+
+  .ratelimit-footer {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .ratelimit-footer p {
+    margin: 0;
+    color: var(--fg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .ratelimit-footer i {
+    color: var(--blue);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .ratelimit-info {
+      padding: 1rem 0;
+    }
+
+    .ratelimit-card {
+      padding: 1.5rem;
+    }
+
+    .ratelimit-icon {
+      font-size: 3rem;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+    }
+
+    .action-buttons .btn {
+      justify-content: center;
+    }
+
+    .ratelimit-footer p {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.25rem;
+    }
+  }
+</style>
+{{end}}
