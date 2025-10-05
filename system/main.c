@@ -16,6 +16,13 @@ int starts_with(const char *str, const char *prefix) {
     return 1;
 }
 
+int is_cloudflare_tunnel_request(const char *request) {
+    // Check for Cloudflare tunnel headers
+    return (strstr(request, "cf-ray:") != NULL || 
+            strstr(request, "cf-connecting-ip:") != NULL ||
+            strstr(request, "cf-visitor:") != NULL);
+}
+
 int execute_command(const char *command) {
     printf("Executing: %s\n", command);
     int result = system(command);
@@ -89,7 +96,7 @@ int main(void) {
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_addr.s_addr = inet_addr("127.0.0.1");
     address.sin_port = htons(PORT);
 
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0) {
@@ -104,7 +111,7 @@ int main(void) {
         return 1;
     }
 
-    printf("Server is running on http://localhost:%d/\n", PORT);
+    printf("Server is running on http://127.0.0.1:%d/ (ready for Cloudflare tunnel)\n", PORT);
 
     while (1) {
         new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t *)&addrlen);
@@ -123,6 +130,11 @@ int main(void) {
 
         // Check for POST /webhook
         if (starts_with(buffer, "POST /webhook ")) {
+            // Log if this is a Cloudflare tunnel request
+            if (is_cloudflare_tunnel_request(buffer)) {
+                printf("Cloudflare tunnel request detected\n");
+            }
+            
             // Find the start of the JSON payload (after headers)
             char *payload_start = strstr(buffer, "\r\n\r\n");
             if (payload_start) {
@@ -139,6 +151,9 @@ int main(void) {
                     "HTTP/1.1 %s\r\n"
                     "Content-Type: text/plain\r\n"
                     "Content-Length: %zu\r\n"
+                    "Access-Control-Allow-Origin: *\r\n"
+                    "Access-Control-Allow-Methods: POST, OPTIONS\r\n"
+                    "Access-Control-Allow-Headers: Content-Type, Authorization\r\n"
                     "\r\n"
                     "%s\n", status_code, strlen(response_msg), response_msg);
                 
@@ -148,15 +163,27 @@ int main(void) {
                     "HTTP/1.1 400 Bad Request\r\n"
                     "Content-Type: text/plain\r\n"
                     "Content-Length: 12\r\n"
+                    "Access-Control-Allow-Origin: *\r\n"
                     "\r\n"
                     "Bad Request";
                 send(new_socket, bad_request_response, strlen(bad_request_response), 0);
             }
+        } else if (starts_with(buffer, "OPTIONS ")) {
+            // Handle CORS preflight requests for Cloudflare tunnel
+            const char options_response[] =
+                "HTTP/1.1 200 OK\r\n"
+                "Access-Control-Allow-Origin: *\r\n"
+                "Access-Control-Allow-Methods: POST, OPTIONS\r\n"
+                "Access-Control-Allow-Headers: Content-Type, Authorization\r\n"
+                "Content-Length: 0\r\n"
+                "\r\n";
+            send(new_socket, options_response, strlen(options_response), 0);
         } else {
             const char not_found_response[] =
                 "HTTP/1.1 404 Not Found\r\n"
                 "Content-Type: text/plain\r\n"
                 "Content-Length: 10\r\n"
+                "Access-Control-Allow-Origin: *\r\n"
                 "\r\n"
                 "Not Found";
             send(new_socket, not_found_response, strlen(not_found_response), 0);
