@@ -54,6 +54,13 @@ func (sh *SitemapHandler) generateSitemap() *models.Sitemap {
 			ChangeFreq: "weekly",
 			Priority:   "0.8",
 		},
+		{
+			Path:       "/changelog",
+			Title:      "Changelog",
+			LastMod:    now,
+			ChangeFreq: "weekly",
+			Priority:   "0.7",
+		},
 	}
 
 	urls := make([]models.SitemapURL, len(pages))

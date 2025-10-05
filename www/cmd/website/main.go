@@ -62,6 +62,22 @@ func main() {
 		handlers.ProjectsHandler(w, r, tmplData)
 	})
 
+	mux.HandleFunc("/changelog", func(w http.ResponseWriter, r *http.Request) {
+		handlers.ChangelogHandler(w, r, tmplData)
+	})
+
+	mux.HandleFunc("/changelog.json", func(w http.ResponseWriter, r *http.Request) {
+		handlers.ChangelogAPIHandler(w, r, tmplData)
+	})
+
+	mux.HandleFunc("/changelog.rss", func(w http.ResponseWriter, r *http.Request) {
+		handlers.ChangelogRSSHandler(w, r, tmplData)
+	})
+
+	mux.HandleFunc("/changelog.md", func(w http.ResponseWriter, r *http.Request) {
+		handlers.ChangelogMarkdownHandler(w, r, tmplData)
+	})
+
 	mux.HandleFunc("/health", handlers.HealthHandler)
 	handler := middleware.RateLimitMiddleware(rateLimiter)(mux)
 	handler = middleware.ExtraMiddleware(handler)

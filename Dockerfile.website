@@ -15,6 +15,8 @@ RUN go mod download
 
 COPY www/ ./
 
+COPY CHANGELOG.md ./
+
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
     -ldflags='-w -s -extldflags "-static"' \
     -o website ./cmd/website
@@ -36,6 +38,7 @@ COPY --from=builder /app/website /app/website
 COPY --from=builder /app/templates /app/templates
 COPY --from=builder /app/static /app/static
 COPY --from=builder /app/html /app/html
+COPY --from=builder /app/CHANGELOG.md /app/CHANGELOG.md
 
 USER appuser
 

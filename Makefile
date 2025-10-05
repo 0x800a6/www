@@ -9,7 +9,7 @@ help: ## Show this help message
 
 # Development targets
 build: ## Build the Go application
-	cd www && go build -o bin/website ./cmd/website && cp -r html bin/ && cp -r static bin/ && cp -r templates bin/
+	cd www && go build -o bin/website ./cmd/website && cp -r html bin/ && cp -r static bin/ && cp -r templates bin/ && cp -r ../CHANGELOG.md bin/
 
 fmt: ## Format Go code
 	cd www && go fmt ./...

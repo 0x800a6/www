@@ -26,6 +26,8 @@ func GetPageTitle(path string) string {
 		return "Resume"
 	case "/projects":
 		return "Projects"
+	case "/changelog":
+		return "Changelog"
 	default:
 		return "Page"
 	}
