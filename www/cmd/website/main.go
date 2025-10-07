@@ -78,6 +78,8 @@ func main() {
 		handlers.ChangelogMarkdownHandler(w, r, tmplData)
 	})
 
+	mux.HandleFunc("/vtuberstv", handlers.VTubersTVProjectsHandler)
+
 	mux.HandleFunc("/health", handlers.HealthHandler)
 	handler := middleware.RateLimitMiddleware(rateLimiter)(mux)
 	handler = middleware.ExtraMiddleware(handler)
